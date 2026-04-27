@@ -96,6 +96,7 @@ image beautiful = "beautifulNeighborhood.png"
 image apartmentFront = "apartmentFront.png"
 image stairwell = "stairwell.png"
 image apartmentDoor = "apartmentDoor.png"
+image white = "white.png"
 
 screen stats_display():
     frame:
@@ -1897,7 +1898,6 @@ label backstoryChoice5:
 label silentTrainChoice:
     stop sound
     # Passage: silentTrainChoice
-    play music "audio/SubwayThemeALT.mp3"
     scene subwayAlt
     show ratFaceSad at left with dissolve
     play sound "audio/Narration/whatnow.mp3"
@@ -1957,6 +1957,9 @@ label dogTrainChoice4:
 
 label dogTrainChoice5:
     stop sound
+    stop music fadeout 2.0
+    pause 0.2
+    play music "audio/FinalRun.mp3" fadein 2.0 loop
     play sound "audio/dogBark.mp3"
     cuteDog "\"RUFF RUFF RUFF RUFF\""
     jump dogTrainChoice6
@@ -2044,14 +2047,14 @@ label exitTrainChoice:
 
 label exitTrainChoice2:
     stop sound
-    scene subwayOpen with dissolve
-    show ratFace at left with dissolve
-    play sound "audio/Flashbang.mp3" fadeout 0.2
+    scene subwayOpen
+    show ratFace at left
     show flash:
         alpha 1.0
-        linear 0.3 alpha 0.0
-    pause 2
+        linear 0.5 alpha 0.0
+    pause 0.5
     hide flash
+    play sound "audio/Flashbang.mp3" fadeout 0.2
     "**FLASH**"
     jump exitTrainChoice3
 
@@ -2133,6 +2136,7 @@ label keepFollowChoice2:
 
 label keepFollowChoice3:
     stop sound
+    stop music fadeout 2.0
     play sound "audio/Narration/shehandsthe.mp3"
     "She hands the handle of the leash to you and opens the door, and then simply walks off with her airpods back in."
     menu:
@@ -2150,7 +2154,7 @@ label walkChoice:
 label walkChoice2:
     stop sound
     scene apartmentDoor with dissolve
-    "{b}2R{/b}"
+    "{b}Door Number: 2R{/b}"
     jump walkChoice3
 
 label walkChoice3:
@@ -2178,17 +2182,26 @@ label reachFurtherChoice3:
     stop sound
     play sound "audio/Narration/thedogbarks.mp3"
     "The dog barks loudly and you hear the click of the lock on the door unfasten."
-    jump preEnd
+    scene white with dissolve
+    jump preEnd1_1
 
-label preEnd:
+label preEnd1_1:
+    stop sound
+    play sound "audio/doorUnlock.mp3"
+    "..."
+    $ renpy.pause(2, hard=True)
+    jump preEnd1
+
+label preEnd1:
     stop sound
     "{b}HAPPY BIRTHDAY CLINT!{/b}"
     jump preEnd2
 
 label preEnd2:
     stop sound
+    play music "audio/FloatyHappyEnd.mp3" fadein 2.0
     play sound "audio/Narration/itsyourfriends.mp3"
-    "It's your friends and family. They've decided to hold a birthday party for you: someone they deem special enough to hold it for. Your family lives across the country but flew out to see you. Your roommates let them in and set up the large frosted cake on the shabby dining table. You're 26 now, one year older than that {i}douchebag{/i} manager Trash-sta Vanderbelch or whatever her name is. Your {b}{i}Streak{sup}TM{/sup}{/i}{/b} of being 25 is now over, and you couldn't be happier."
+    "{size=-10}It's your friends and family. They've decided to hold a birthday party for you: someone they deem special enough to hold it for. Your family lives across the country but flew out to see you. Your roommates let them in and set up the large frosted cake on the shabby dining table. You're 26 now, one year older than that {i}douchebag{/i} manager Trash-sta Vanderbelch or whatever her name is. Your {b}{i}Streak{sup}TM{/sup}{/i}{/b} of being 25 is now over, and you couldn't be happier.{/size}"
     jump goodEnd
 
 label goodEnd:
