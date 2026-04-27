@@ -1,0 +1,1612 @@
+{
+  "uuid": "B3DAE078-E4AB-404E-AF01-E71F389929F7",
+  "name": "RatfaceV2",
+  "creator": "Twine",
+  "creatorVersion": "2.10.0",
+  "schemaName": "Twine to JSON",
+  "schemaVersion": "0.0.6",
+  "createdAtMs": 1776782283875,
+  "passages": [
+    {
+      "name": "Start",
+      "tags": "",
+      "id": "1",
+      "text": "The color is black. A mix of drowsiness and nausea fight for first place in your god-forsaken mind. It's your choice. Risk seeing what's out there, or simply lay flat, practically dead.\n\n[[Lay flat->deadChoice]]\n[[Open eyes->openEyeChoice]]",
+      "links": [
+        {
+          "linkText": "Lay flat",
+          "passageName": "deadChoice",
+          "original": "[[Lay flat->deadChoice]]"
+        },
+        {
+          "linkText": "Open eyes",
+          "passageName": "openEyeChoice",
+          "original": "[[Open eyes->openEyeChoice]]"
+        }
+      ],
+      "cleanText": "The color is black. A mix of drowsiness and nausea fight for first place in your god-forsaken mind. It's your choice. Risk seeing what's out there, or simply lay flat, practically dead."
+    },
+    {
+      "name": "header",
+      "tags": "header",
+      "id": "2",
+      "text": "(if: $morale is 0)[(set: $morale to 3)] (if:$identifyBool is 0)[(set:$identifyBool to false)] (if: $name is 0)[(set: $name to \"????\")] (if: $status is 0)[(set: $status to \"Oblivion\")](if: $linkedin is 0)[(set:$linkedin to \"???\")](if:$otterEnd is 0)[(set:$otterEnd to false)](if:$otterEnd is 0)[(set:$otterEnd to false)](if:$nameEnd is 0)[(set:$nameEnd to false)](if:$singEnd is 0)[(set:$singEnd to false)]\n''Morale: $morale''\t|\t''Name: $name''\t|\t''Current Status: $status''\t|\t''Linkedin Link: $linkedin''\n----",
+      "links": [],
+      "cleanText": "(if: $morale is 0)[(set: $morale to 3)] (if:$identifyBool is 0)[(set:$identifyBool to false)] (if: $name is 0)[(set: $name to \"????\")] (if: $status is 0)[(set: $status to \"Oblivion\")](if: $linkedin is 0)[(set:$linkedin to \"???\")](if:$otterEnd is 0)[(set:$otterEnd to false)](if:$otterEnd is 0)[(set:$otterEnd to false)](if:$nameEnd is 0)[(set:$nameEnd to false)](if:$singEnd is 0)[(set:$singEnd to false)]\n''Morale: $morale''\t|\t''Name: $name''\t|\t''Current Status: $status''\t|\t''Linkedin Link: $linkedin''\n----"
+    },
+    {
+      "name": "deadChoice",
+      "tags": "",
+      "id": "3",
+      "text": "Silence. It's the one language that you can comprehend. Not impressed, not disappointing. The white bread of experiences. \n\n[[Continue to lie down->deadChoiceAlt]]\n[[Open your eyes->openEyeChoice]]",
+      "links": [
+        {
+          "linkText": "Continue to lie down",
+          "passageName": "deadChoiceAlt",
+          "original": "[[Continue to lie down->deadChoiceAlt]]"
+        },
+        {
+          "linkText": "Open your eyes",
+          "passageName": "openEyeChoice",
+          "original": "[[Open your eyes->openEyeChoice]]"
+        }
+      ],
+      "cleanText": "Silence. It's the one language that you can comprehend. Not impressed, not disappointing. The white bread of experiences."
+    },
+    {
+      "name": "openEyeChoice",
+      "tags": "",
+      "id": "4",
+      "text": "**FLASH** \nIt's simply too much for you to comprehend. The loud grumbles emenating from the floor. The bright LED lights blaring through every oriphace contained on your stained body. What the fuck is //Salesforce// and what do they do? These random billboard advertisements might as well be spoken in a different language at this point. //''The Streaktm''// is gone. It's all gone...\n\n[[Where am I?->whereAmIChoice]]",
+      "links": [
+        {
+          "linkText": "Where am I?",
+          "passageName": "whereAmIChoice",
+          "original": "[[Where am I?->whereAmIChoice]]"
+        }
+      ],
+      "cleanText": "**FLASH** \nIt's simply too much for you to comprehend. The loud grumbles emenating from the floor. The bright LED lights blaring through every oriphace contained on your stained body. What the fuck is //Salesforce// and what do they do? These random billboard advertisements might as well be spoken in a different language at this point. //''The Streaktm''// is gone. It's all gone..."
+    },
+    {
+      "name": "whereAmIChoice",
+      "tags": "",
+      "id": "5",
+      "text": "You're in a subway car, rudely awaking yourself from a nap. It could be worse. You could simply be dead. But that's not your main concern because when you look in the window, at your reflection, you see...\n\n[[continue->ratFaceReveal]]",
+      "links": [
+        {
+          "linkText": "continue",
+          "passageName": "ratFaceReveal",
+          "original": "[[continue->ratFaceReveal]]"
+        }
+      ],
+      "cleanText": "You're in a subway car, rudely awaking yourself from a nap. It could be worse. You could simply be dead. But that's not your main concern because when you look in the window, at your reflection, you see..."
+    },
+    {
+      "name": "ratFaceReveal",
+      "tags": "",
+      "id": "6",
+      "text": "A RAT. A RAT in his crumpled suit and tie, a briefcase no longer to be found, probably stolen by someone with some actual gumption. But you're just a rat. In a both figurative and literal sense. You don't even know how you got here, but you did.\n(set:$status to \"Confused and Lost\")\n[[*Observe the environment*->ObservationBase]]",
+      "links": [
+        {
+          "linkText": "*Observe the environment*",
+          "passageName": "ObservationBase",
+          "original": "[[*Observe the environment*->ObservationBase]]"
+        }
+      ],
+      "cleanText": "A RAT. A RAT in his crumpled suit and tie, a briefcase no longer to be found, probably stolen by someone with some actual gumption. But you're just a rat. In a both figurative and literal sense. You don't even know how you got here, but you did.\n(set:$status to \"Confused and Lost\")"
+    },
+    {
+      "name": "ObservationBase",
+      "tags": "",
+      "id": "7",
+      "text": "This train car is a literal zoo. No humans to be found. Various species from the animal kingdom lie here: the proud lion on her way to deliver a presentation, the sly snake salesman, on his way to canal street, and you, the rat. \n\nIn the bottom corner of the disabled seating area you see brown, glass bottles, with a little bit of their enchanting liquor left. A loud group of teen hyenas are chatting on their phones, occasionally looking at you, and then back down to their phones, and cackle in unison. One holds a vape in his hand. One holds a skateboard in his hand. And the other is just living in the moment, only a phone in hand.\n\nThe 70/30 ratio of piss and janitor soap eminates from the ground, which you've become numb to. What will you do? \n(set:$diceRoll to (random:1,20))\n[[Wait, sorry, who am I?->identifyChoice]]\n(if:$identifyBool)[[[Talk to the hyenas->hyenaChoice]]\n][[Analyze the bottles->beerChoice]]\n[[I want to attempt a cartwheel! (D15)->cartwheelChoice]]",
+      "links": [
+        {
+          "linkText": "Wait, sorry, who am I?",
+          "passageName": "identifyChoice",
+          "original": "[[Wait, sorry, who am I?->identifyChoice]]"
+        },
+        {
+          "linkText": "[Talk to the hyenas",
+          "passageName": "hyenaChoice]",
+          "original": "[[[Talk to the hyenas->hyenaChoice]]\n"
+        },
+        {
+          "linkText": "Analyze the bottles",
+          "passageName": "beerChoice",
+          "original": "[[Analyze the bottles->beerChoice]]"
+        },
+        {
+          "linkText": "I want to attempt a cartwheel! (D15)",
+          "passageName": "cartwheelChoice",
+          "original": "[[I want to attempt a cartwheel! (D15)->cartwheelChoice]]"
+        }
+      ],
+      "cleanText": "This train car is a literal zoo. No humans to be found. Various species from the animal kingdom lie here: the proud lion on her way to deliver a presentation, the sly snake salesman, on his way to canal street, and you, the rat. \n\nIn the bottom corner of the disabled seating area you see brown, glass bottles, with a little bit of their enchanting liquor left. A loud group of teen hyenas are chatting on their phones, occasionally looking at you, and then back down to their phones, and cackle in unison. One holds a vape in his hand. One holds a skateboard in his hand. And the other is just living in the moment, only a phone in hand.\n\nThe 70/30 ratio of piss and janitor soap eminates from the ground, which you've become numb to. What will you do? \n(set:$diceRoll to (random:1,20))\n\n(if:$identifyBool)]"
+    },
+    {
+      "name": "identifyChoice",
+      "tags": "",
+      "id": "8",
+      "text": "Your name is... you don't know. How could you forget your own name?\n\n[[I don't know!->dontKnowNameChoice]]\n[[Can I get at least how I got here?->howIGotHereChoice]]",
+      "links": [
+        {
+          "linkText": "I don't know!",
+          "passageName": "dontKnowNameChoice",
+          "original": "[[I don't know!->dontKnowNameChoice]]"
+        },
+        {
+          "linkText": "Can I get at least how I got here?",
+          "passageName": "howIGotHereChoice",
+          "original": "[[Can I get at least how I got here?->howIGotHereChoice]]"
+        }
+      ],
+      "cleanText": "Your name is... you don't know. How could you forget your own name?"
+    },
+    {
+      "name": "hyenaChoice",
+      "tags": "",
+      "id": "9",
+      "text": "You got up to the group of Hyenas, and each of their gazes slowly fasten onto you. A rut is in your throat as you try to think of what to say to them, what to ask them, it feels like an impossible task. But. You have to try.\n\n[[\"Hi I was wondering if you guys know how I got here?\"->hyenaHowChoice]]\n[[\"I would politely want to ask you guys to stop laughing at me\"->hyenaPoliteChoice]]\n[[\"Get the fuck off my train car before I send your asses to the shadow realm\"->hyenaAggroChoice]]",
+      "links": [
+        {
+          "linkText": "\"Hi I was wondering if you guys know how I got here?\"",
+          "passageName": "hyenaHowChoice",
+          "original": "[[\"Hi I was wondering if you guys know how I got here?\"->hyenaHowChoice]]"
+        },
+        {
+          "linkText": "\"I would politely want to ask you guys to stop laughing at me\"",
+          "passageName": "hyenaPoliteChoice",
+          "original": "[[\"I would politely want to ask you guys to stop laughing at me\"->hyenaPoliteChoice]]"
+        },
+        {
+          "linkText": "\"Get the fuck off my train car before I send your asses to the shadow realm\"",
+          "passageName": "hyenaAggroChoice",
+          "original": "[[\"Get the fuck off my train car before I send your asses to the shadow realm\"->hyenaAggroChoice]]"
+        }
+      ],
+      "cleanText": "You got up to the group of Hyenas, and each of their gazes slowly fasten onto you. A rut is in your throat as you try to think of what to say to them, what to ask them, it feels like an impossible task. But. You have to try."
+    },
+    {
+      "name": "beerChoice",
+      "tags": "",
+      "id": "10",
+      "text": "The sweet smell of liquor calls you. You can fully forget about //''The Streaktm''//. It doesn't matter anymore. A siren, laying on its stage (in this case the gunky subway floor), the beer wraps its temptation around you. You clumsily puppeteer your limbs to greet Mr. Beer with a firm handshake. \n\n(set:$status to \"Horny for Beer\")\n(set:$diceRoll to (random: 1,20))\n[[Smell it->smellBeerChoice]]\n[[Take a filthy swig of it you animal->chugBeerChoice]]\n[[Escape it's clutches (D10)->escapeChoice]]",
+      "links": [
+        {
+          "linkText": "Smell it",
+          "passageName": "smellBeerChoice",
+          "original": "[[Smell it->smellBeerChoice]]"
+        },
+        {
+          "linkText": "Take a filthy swig of it you animal",
+          "passageName": "chugBeerChoice",
+          "original": "[[Take a filthy swig of it you animal->chugBeerChoice]]"
+        },
+        {
+          "linkText": "Escape it's clutches (D10)",
+          "passageName": "escapeChoice",
+          "original": "[[Escape it's clutches (D10)->escapeChoice]]"
+        }
+      ],
+      "cleanText": "The sweet smell of liquor calls you. You can fully forget about //''The Streaktm''//. It doesn't matter anymore. A siren, laying on its stage (in this case the gunky subway floor), the beer wraps its temptation around you. You clumsily puppeteer your limbs to greet Mr. Beer with a firm handshake. \n\n(set:$status to \"Horny for Beer\")\n(set:$diceRoll to (random: 1,20))"
+    },
+    {
+      "name": "cartwheelChoice",
+      "tags": "",
+      "id": "11",
+      "text": "Your roll: $diceRoll\n\nYour hands are in the air, rays poking out from your fingers as you line up the preliminary //cart// to the //wheel//. \n\n(if:$diceRoll > 15)[//*SLAP, SLAP, THUNK*//. You did it. You did the cartwheel. The crowd watches in awe. You sir, are a champion. Now take a victory lap, and head back to your seat to figure out why you're here.](else:)[//*SLAP, SLIP, THUNK*//. You failed. This feeling is all too familiar now. Just keep your wits about you and head back to your seat.]\n\n[[Head back to your seat->policeChase]]",
+      "links": [
+        {
+          "linkText": "Head back to your seat",
+          "passageName": "policeChase",
+          "original": "[[Head back to your seat->policeChase]]"
+        }
+      ],
+      "cleanText": "Your roll: $diceRoll\n\nYour hands are in the air, rays poking out from your fingers as you line up the preliminary //cart// to the //wheel//. \n\n(if:$diceRoll > 15)[//*SLAP, SLAP, THUNK*//. You did it. You did the cartwheel. The crowd watches in awe. You sir, are a champion. Now take a victory lap, and head back to your seat to figure out why you're here.](else:)[//*SLAP, SLIP, THUNK*//. You failed. This feeling is all too familiar now. Just keep your wits about you and head back to your seat.]"
+    },
+    {
+      "name": "Transition",
+      "tags": "",
+      "id": "12",
+      "text": "Stops pass by at the blink of an eye. But where are we going? Why are we here? When do we get off? When will the illusion break? The streak.",
+      "links": [],
+      "cleanText": "Stops pass by at the blink of an eye. But where are we going? Why are we here? When do we get off? When will the illusion break? The streak."
+    },
+    {
+      "name": "smellBeerChoice",
+      "tags": "",
+      "id": "13",
+      "text": "Oh it's a good one alright. Coors Banquet. Your favorite. The temptation is too much and the idea of escape, ironically, has escaped you. Might as well chug.\n\n[[Fine you got me... Chug chug chug->chugBeerChoice]]",
+      "links": [
+        {
+          "linkText": "Fine you got me... Chug chug chug",
+          "passageName": "chugBeerChoice",
+          "original": "[[Fine you got me... Chug chug chug->chugBeerChoice]]"
+        }
+      ],
+      "cleanText": "Oh it's a good one alright. Coors Banquet. Your favorite. The temptation is too much and the idea of escape, ironically, has escaped you. Might as well chug."
+    },
+    {
+      "name": "escapeChoice",
+      "tags": "",
+      "id": "14",
+      "text": "Your Roll: $diceRoll ((if:$diceRoll>15)[Success](else:)[Utter Failure])\n\n(if:$diceRoll >= 15)[Every fiber of your body has been given the directive to resist the sexy alcohol. You're able to successfully prevent another incident that might ruin \"The Streak\"tm] (else:)[You fail to convince yourself that giving up this beer is worth it and you start chugging your woes away.\n\n[[Ohhhh yeah that's the stuff->chugBeerChoice]]]",
+      "links": [
+        {
+          "linkText": "Ohhhh yeah that's the stuff",
+          "passageName": "chugBeerChoice",
+          "original": "[[Ohhhh yeah that's the stuff->chugBeerChoice]]"
+        }
+      ],
+      "cleanText": "Your Roll: $diceRoll ((if:$diceRoll>15)[Success](else:)[Utter Failure])\n\n(if:$diceRoll >= 15)[Every fiber of your body has been given the directive to resist the sexy alcohol. You're able to successfully prevent another incident that might ruin \"The Streak\"tm] (else:)[You fail to convince yourself that giving up this beer is worth it and you start chugging your woes away.\n\n]"
+    },
+    {
+      "name": "chugBeerChoice",
+      "tags": "",
+      "id": "15",
+      "text": "Even though you've already passed the subway stop for the //''The Streaktm''//, you couldn't care less. The inflation of balloons of forgetfulness leech your mind, and before you know it, this episode of your life fades to black.\n(set:$status to \"More drunk than when you started\")\n[[//''Allow time to pass in the infinite expanse''//->Start]]",
+      "links": [
+        {
+          "linkText": "//''Allow time to pass in the infinite expanse''//",
+          "passageName": "Start",
+          "original": "[[//''Allow time to pass in the infinite expanse''//->Start]]"
+        }
+      ],
+      "cleanText": "Even though you've already passed the subway stop for the //''The Streaktm''//, you couldn't care less. The inflation of balloons of forgetfulness leech your mind, and before you know it, this episode of your life fades to black.\n(set:$status to \"More drunk than when you started\")"
+    },
+    {
+      "name": "dontKnowNameChoice",
+      "tags": "",
+      "id": "16",
+      "text": "Shame on you! //''SHAME!''// This is the most important part of a human's origin story. This is why you're simply a rat. Rats don't get names. They just scuttle around without meaning in the infinite labyrinth of the subway tunnels, identifying themselves as the scuttlers of human waste. \n(set:$diceRoll to (random: 1,20))\n[[No no no I can remember my name I promise! (D18)->nameAttempt]]\n[[I give up->nameGiveUp]]",
+      "links": [
+        {
+          "linkText": "No no no I can remember my name I promise! (D18)",
+          "passageName": "nameAttempt",
+          "original": "[[No no no I can remember my name I promise! (D18)->nameAttempt]]"
+        },
+        {
+          "linkText": "I give up",
+          "passageName": "nameGiveUp",
+          "original": "[[I give up->nameGiveUp]]"
+        }
+      ],
+      "cleanText": "Shame on you! //''SHAME!''// This is the most important part of a human's origin story. This is why you're simply a rat. Rats don't get names. They just scuttle around without meaning in the infinite labyrinth of the subway tunnels, identifying themselves as the scuttlers of human waste. \n(set:$diceRoll to (random: 1,20))"
+    },
+    {
+      "name": "howIGotHereChoice",
+      "tags": "",
+      "id": "17",
+      "text": "You have an origin story. You know it and feel it. A rat doesn't appear out of thin air in a subway car. It has to scuttle in somehow. You look around to find something, or someone that has led you in on this chase. You're unable to recognize much. But, the smell of the brown, glass, bottle in the corner sticks out in the sea of NYC musk. \n\n[[//continue//->ObservationBase]]\n(set:$identifyBool to true)",
+      "links": [
+        {
+          "linkText": "//continue//",
+          "passageName": "ObservationBase",
+          "original": "[[//continue//->ObservationBase]]"
+        }
+      ],
+      "cleanText": "You have an origin story. You know it and feel it. A rat doesn't appear out of thin air in a subway car. It has to scuttle in somehow. You look around to find something, or someone that has led you in on this chase. You're unable to recognize much. But, the smell of the brown, glass, bottle in the corner sticks out in the sea of NYC musk. \n\n\n(set:$identifyBool to true)"
+    },
+    {
+      "name": "nameAttempt",
+      "tags": "",
+      "id": "18",
+      "text": "(if:$diceRoll >= 18)[You successfully vacuumed the shelves of your treacherous memory. Your name is Clint. Clint Kratz. Congratulations, you've successfully named a random rat on the subway.](else:)[In what world did you think that would work? This is why rats don't take risks. What good comes out of trying to fight the inevitable. Silly, immature, rat.]\n(if:$diceRoll < 18)[(set:$morale to $morale - 1)] (if:$diceRoll >= 18)[(set:$name to \"Clint Kratz\")] (set:$identifyBool to true)\n[[//continue//->ObservationBase]]",
+      "links": [
+        {
+          "linkText": "//continue//",
+          "passageName": "ObservationBase",
+          "original": "[[//continue//->ObservationBase]]"
+        }
+      ],
+      "cleanText": "(if:$diceRoll >= 18)[You successfully vacuumed the shelves of your treacherous memory. Your name is Clint. Clint Kratz. Congratulations, you've successfully named a random rat on the subway.](else:)[In what world did you think that would work? This is why rats don't take risks. What good comes out of trying to fight the inevitable. Silly, immature, rat.]\n(if:$diceRoll < 18)[(set:$morale to $morale - 1)] (if:$diceRoll >= 18)[(set:$name to \"Clint Kratz\")] (set:$identifyBool to true)"
+    },
+    {
+      "name": "nameGiveUp",
+      "tags": "",
+      "id": "19",
+      "text": "Good. As you should. What's the point of something as insignificant as a rat taking risks? Just get out of your own head an observe the world from now on.\n(set:$identifyBool to true)\n[[//continue//->ObservationBase]]",
+      "links": [
+        {
+          "linkText": "//continue//",
+          "passageName": "ObservationBase",
+          "original": "[[//continue//->ObservationBase]]"
+        }
+      ],
+      "cleanText": "Good. As you should. What's the point of something as insignificant as a rat taking risks? Just get out of your own head an observe the world from now on.\n(set:$identifyBool to true)"
+    },
+    {
+      "name": "hyenaHowChoice",
+      "tags": "",
+      "id": "20",
+      "text": "The young teens look at you. Look back at each other. Their mouths tighten. Their cheeks puff with anticipation. This is not good for you. And then an explosion of laughter hits.\n\n\"HEHHEHEHEHEHEHEHE\" \n\n\"YOUR JACKET AND TIE LOOK SO GOOFY\"\n\nHe puffs a large vape cloud right in your face. Green apple flavored. \n\n\"OMG HE ACTUALLY DOES LOOK LIKE A RAT\"\n\nSomething about that insult feels familiar in a bad way. Laughter fills the train car. Anger for a past version of you bubbles up from the scum.\n\n[[//Swing a punch on one of the teens//->fightChoice]]\n[[//Accept your shame like a loser//->shameChoice]]",
+      "links": [
+        {
+          "linkText": "//Swing a punch on one of the teens//",
+          "passageName": "fightChoice",
+          "original": "[[//Swing a punch on one of the teens//->fightChoice]]"
+        },
+        {
+          "linkText": "//Accept your shame like a loser//",
+          "passageName": "shameChoice",
+          "original": "[[//Accept your shame like a loser//->shameChoice]]"
+        }
+      ],
+      "cleanText": "The young teens look at you. Look back at each other. Their mouths tighten. Their cheeks puff with anticipation. This is not good for you. And then an explosion of laughter hits.\n\n\"HEHHEHEHEHEHEHEHE\" \n\n\"YOUR JACKET AND TIE LOOK SO GOOFY\"\n\nHe puffs a large vape cloud right in your face. Green apple flavored. \n\n\"OMG HE ACTUALLY DOES LOOK LIKE A RAT\"\n\nSomething about that insult feels familiar in a bad way. Laughter fills the train car. Anger for a past version of you bubbles up from the scum."
+    },
+    {
+      "name": "hyenaPoliteChoice",
+      "tags": "",
+      "id": "21",
+      "text": "The young teens look at you. Look back at each other. Their mouths tighten. Their cheeks puff with anticipation. This is not good for you. And then an explosion of laughter hits.\n\n\"HEHHEHEHEHEHEHEHE\" \n\n\"YOUR JACKET AND TIE LOOK SO GOOFY\"\n\nHe puffs a large vape cloud right in your face. Green apple flavored. \n\n\"OMG HE ACTUALLY DOES LOOK LIKE A RAT\"\n\nSomething about that insult feels familiar in a bad way. Laughter fills the train car. Anger for a past version of you bubbles up from the scum.\n\n[[//Swing a punch on one of the teens//->fightChoice]]\n[[//Accept your shame like a loser//->shameChoice]]",
+      "links": [
+        {
+          "linkText": "//Swing a punch on one of the teens//",
+          "passageName": "fightChoice",
+          "original": "[[//Swing a punch on one of the teens//->fightChoice]]"
+        },
+        {
+          "linkText": "//Accept your shame like a loser//",
+          "passageName": "shameChoice",
+          "original": "[[//Accept your shame like a loser//->shameChoice]]"
+        }
+      ],
+      "cleanText": "The young teens look at you. Look back at each other. Their mouths tighten. Their cheeks puff with anticipation. This is not good for you. And then an explosion of laughter hits.\n\n\"HEHHEHEHEHEHEHEHE\" \n\n\"YOUR JACKET AND TIE LOOK SO GOOFY\"\n\nHe puffs a large vape cloud right in your face. Green apple flavored. \n\n\"OMG HE ACTUALLY DOES LOOK LIKE A RAT\"\n\nSomething about that insult feels familiar in a bad way. Laughter fills the train car. Anger for a past version of you bubbles up from the scum."
+    },
+    {
+      "name": "hyenaAggroChoice",
+      "tags": "",
+      "id": "22",
+      "text": "They begin to mock you. \n\n\"YO WHO DOES THIS OLD MAN THINK HE IS?\"\n\nYou're 25. Or at least you think you are. \n\n\"YOU'RE SO TOUGH HUH\"\n\nYou never said that.\n\n\"YOU DRESS LIKE MY STEP-DAD\"\n\nHurtful.\n(set:$status to \"Slightly Concussed\")\n[[\"Look you guys just hurt my feelings and I don't really think it's necessary-\"->hyenaSwingChoice]]\n[[//Walk away in shame//->shameChoice]]",
+      "links": [
+        {
+          "linkText": "\"Look you guys just hurt my feelings and I don't really think it's necessary-\"",
+          "passageName": "hyenaSwingChoice",
+          "original": "[[\"Look you guys just hurt my feelings and I don't really think it's necessary-\"->hyenaSwingChoice]]"
+        },
+        {
+          "linkText": "//Walk away in shame//",
+          "passageName": "shameChoice",
+          "original": "[[//Walk away in shame//->shameChoice]]"
+        }
+      ],
+      "cleanText": "They begin to mock you. \n\n\"YO WHO DOES THIS OLD MAN THINK HE IS?\"\n\nYou're 25. Or at least you think you are. \n\n\"YOU'RE SO TOUGH HUH\"\n\nYou never said that.\n\n\"YOU DRESS LIKE MY STEP-DAD\"\n\nHurtful.\n(set:$status to \"Slightly Concussed\")"
+    },
+    {
+      "name": "fightChoice",
+      "tags": "",
+      "id": "23",
+      "text": "//*BANG*//\n\nYour drunken strike lands clean on the chin of the Hyena that mocked your clothing choices. The other two square up, ready to swing their paws and skateboards at your delicate rat jaw. The Hyena holding a vape drops his vape. The tension is through the sewers. Things are beginning to get serious.\n\nHyena Vape-Teen winds up a punch\n\n[[Weave left, counter with a quick right jab->failureWeaveFightChoice]]\n[[Weave right, counter with a haymaker left->correctFightChoice]]\n[[Swing your leg to trip->correctFightChoice]]\n[[Attempt a tactical headbutt->failureHeadbuttFightChoice]]",
+      "links": [
+        {
+          "linkText": "Weave left, counter with a quick right jab",
+          "passageName": "failureWeaveFightChoice",
+          "original": "[[Weave left, counter with a quick right jab->failureWeaveFightChoice]]"
+        },
+        {
+          "linkText": "Weave right, counter with a haymaker left",
+          "passageName": "correctFightChoice",
+          "original": "[[Weave right, counter with a haymaker left->correctFightChoice]]"
+        },
+        {
+          "linkText": "Swing your leg to trip",
+          "passageName": "correctFightChoice",
+          "original": "[[Swing your leg to trip->correctFightChoice]]"
+        },
+        {
+          "linkText": "Attempt a tactical headbutt",
+          "passageName": "failureHeadbuttFightChoice",
+          "original": "[[Attempt a tactical headbutt->failureHeadbuttFightChoice]]"
+        }
+      ],
+      "cleanText": "//*BANG*//\n\nYour drunken strike lands clean on the chin of the Hyena that mocked your clothing choices. The other two square up, ready to swing their paws and skateboards at your delicate rat jaw. The Hyena holding a vape drops his vape. The tension is through the sewers. Things are beginning to get serious.\n\nHyena Vape-Teen winds up a punch"
+    },
+    {
+      "name": "shameChoice",
+      "tags": "",
+      "id": "24",
+      "text": "You shamefully walk away from that interaction. A repeat of what happens all the time. //''The Streaktm''// is continued in a way. But walking away you feel a sense of shame. You lost.\n\n[[*Surprise attack on the unsuspecting laughing teens*->fightChoice]]\n[[*Walk away like a rat*->ObservationBase]]",
+      "links": [
+        {
+          "linkText": "*Surprise attack on the unsuspecting laughing teens*",
+          "passageName": "fightChoice",
+          "original": "[[*Surprise attack on the unsuspecting laughing teens*->fightChoice]]"
+        },
+        {
+          "linkText": "*Walk away like a rat*",
+          "passageName": "ObservationBase",
+          "original": "[[*Walk away like a rat*->ObservationBase]]"
+        }
+      ],
+      "cleanText": "You shamefully walk away from that interaction. A repeat of what happens all the time. //''The Streaktm''// is continued in a way. But walking away you feel a sense of shame. You lost."
+    },
+    {
+      "name": "hyenaSwingChoice",
+      "tags": "",
+      "id": "25",
+      "text": "//*POW*//\n\nA right hook hits the bottom of your jaw and rocks your head back. It's now or never. \n\n\"OLD MAN NEXT TIME IT'S GONNA BE THE SKATEBOARD THAT DOES THE TALKING\"\n\nForget about //''The Streaktm''// it's time for you get in on the action. This is your calling, your destiny to start a new //''The Streaktm''//. These teenagers need to experience the real world. (set:$status to \"Deeply Concussed\") (set:$morale to $morale - 1)\n\n[[Crawl up in a ball and cry->crawlChoice]]\n[[Fight back for your glory! *Swings punch*->fightChoice]]",
+      "links": [
+        {
+          "linkText": "Crawl up in a ball and cry",
+          "passageName": "crawlChoice",
+          "original": "[[Crawl up in a ball and cry->crawlChoice]]"
+        },
+        {
+          "linkText": "Fight back for your glory! *Swings punch*",
+          "passageName": "fightChoice",
+          "original": "[[Fight back for your glory! *Swings punch*->fightChoice]]"
+        }
+      ],
+      "cleanText": "//*POW*//\n\nA right hook hits the bottom of your jaw and rocks your head back. It's now or never. \n\n\"OLD MAN NEXT TIME IT'S GONNA BE THE SKATEBOARD THAT DOES THE TALKING\"\n\nForget about //''The Streaktm''// it's time for you get in on the action. This is your calling, your destiny to start a new //''The Streaktm''//. These teenagers need to experience the real world. (set:$status to \"Deeply Concussed\") (set:$morale to $morale - 1)"
+    },
+    {
+      "name": "crawlChoice",
+      "tags": "",
+      "id": "26",
+      "text": "You crawl up in a ball and tears start flowing down your cheeks and whiskers. \n\n\"OH MY GOD, A RANDOM TWEAKER TRIED TO PICK A FIGHT WITH US AND GOT TOO SCARED\"\n\nA Green Apple flavored vape cloud hurls itself towards your face.\n\nNo fight, no guts, you truly are a rat. Might as well just close your eyes, and sleep for the next eternity.\n\n[[Close your eyes->Start]]\n[[//''Prove your guts''//->fightChoice]]",
+      "links": [
+        {
+          "linkText": "Close your eyes",
+          "passageName": "Start",
+          "original": "[[Close your eyes->Start]]"
+        },
+        {
+          "linkText": "//''Prove your guts''//",
+          "passageName": "fightChoice",
+          "original": "[[//''Prove your guts''//->fightChoice]]"
+        }
+      ],
+      "cleanText": "You crawl up in a ball and tears start flowing down your cheeks and whiskers. \n\n\"OH MY GOD, A RANDOM TWEAKER TRIED TO PICK A FIGHT WITH US AND GOT TOO SCARED\"\n\nA Green Apple flavored vape cloud hurls itself towards your face.\n\nNo fight, no guts, you truly are a rat. Might as well just close your eyes, and sleep for the next eternity."
+    },
+    {
+      "name": "correctFightChoice",
+      "tags": "",
+      "id": "27",
+      "text": "//*FWOOSH*//\n\nYou weave the first swing from Hyena Vape-Teen and wind up the haymaker...\n\n//*THUNK*//\n\nYou clock Hyena Vape-Teen in the cheek. A tooth flies out, a prize for your fighting abilities. But Hyena Skate-Teen looks like they're about to swing with their skateboard in hand, a possible deadly blow. \n\n[[Duck and trip Hyena 2->duckTripChoice]]\n[[Run away->policeChase]]",
+      "links": [
+        {
+          "linkText": "Duck and trip Hyena 2",
+          "passageName": "duckTripChoice",
+          "original": "[[Duck and trip Hyena 2->duckTripChoice]]"
+        },
+        {
+          "linkText": "Run away",
+          "passageName": "policeChase",
+          "original": "[[Run away->policeChase]]"
+        }
+      ],
+      "cleanText": "//*FWOOSH*//\n\nYou weave the first swing from Hyena Vape-Teen and wind up the haymaker...\n\n//*THUNK*//\n\nYou clock Hyena Vape-Teen in the cheek. A tooth flies out, a prize for your fighting abilities. But Hyena Skate-Teen looks like they're about to swing with their skateboard in hand, a possible deadly blow."
+    },
+    {
+      "name": "failureWeaveFightChoice",
+      "tags": "",
+      "id": "28",
+      "text": "You guessed wrong. You weave to your left and feel a sustained contact on the bone of your jaw. It's the truck of one of their skateboards. Your nausea feels like it just got a million times worse. Saliva flies out of your mouth, exhaling pain and suffering. You are heavily concussed. \n(set:$morale to $morale - 1) (set:$status to \"Heavily Concussed\")\n[[Swing back->standUpChoice]]\n[[Stay down->layDownChoice]]",
+      "links": [
+        {
+          "linkText": "Swing back",
+          "passageName": "standUpChoice",
+          "original": "[[Swing back->standUpChoice]]"
+        },
+        {
+          "linkText": "Stay down",
+          "passageName": "layDownChoice",
+          "original": "[[Stay down->layDownChoice]]"
+        }
+      ],
+      "cleanText": "You guessed wrong. You weave to your left and feel a sustained contact on the bone of your jaw. It's the truck of one of their skateboards. Your nausea feels like it just got a million times worse. Saliva flies out of your mouth, exhaling pain and suffering. You are heavily concussed. \n(set:$morale to $morale - 1) (set:$status to \"Heavily Concussed\")"
+    },
+    {
+      "name": "failureHeadbuttFightChoice",
+      "tags": "",
+      "id": "29",
+      "text": "You charge up your headbutt, to pull the most ferocious attack on the Hyena that insulted your age. 25 is not an old age. Maybe they're just too young. \n\nYou fire off the headbutt. They see it from a mile away. They easily side step your attempt and you trip and faceplant into a metal support pole. You are now heavily concussed. \n(set:$status to \"Heavily Concussed\") (set:$morale to $morale - 1)\n[[Standup and swing again->standUpChoice]]\n[[Lay down and accept defeat->layDownChoice]]",
+      "links": [
+        {
+          "linkText": "Standup and swing again",
+          "passageName": "standUpChoice",
+          "original": "[[Standup and swing again->standUpChoice]]"
+        },
+        {
+          "linkText": "Lay down and accept defeat",
+          "passageName": "layDownChoice",
+          "original": "[[Lay down and accept defeat->layDownChoice]]"
+        }
+      ],
+      "cleanText": "You charge up your headbutt, to pull the most ferocious attack on the Hyena that insulted your age. 25 is not an old age. Maybe they're just too young. \n\nYou fire off the headbutt. They see it from a mile away. They easily side step your attempt and you trip and faceplant into a metal support pole. You are now heavily concussed. \n(set:$status to \"Heavily Concussed\") (set:$morale to $morale - 1)"
+    },
+    {
+      "name": "standUpChoice",
+      "tags": "",
+      "id": "30",
+      "text": "You swing again. You catch two of them. A collateral! Who knew this rat had paws like these. This will be the new start, the new birth of an iteration of //''The Streak''//. You're on top of the world. A drunk rat man just defeated a gang of entitled rat teenagers ... I guess it sounds better in your own mind. \n(set:$morale to $morale + 3) (set:$diceRoll to (random: 1, 20))\n[[Celebrate the victory with a victory cartwheel! (D15)->victoryCartwheelChoice]]\n[[Say a cool line like //\"'Tis but a scratch\"// (D12)->coolLineChoice]]\n[[Walk away in silence, like a mature \"adult\"->walkAwayChoice]]",
+      "links": [
+        {
+          "linkText": "Celebrate the victory with a victory cartwheel! (D15)",
+          "passageName": "victoryCartwheelChoice",
+          "original": "[[Celebrate the victory with a victory cartwheel! (D15)->victoryCartwheelChoice]]"
+        },
+        {
+          "linkText": "Say a cool line like //\"'Tis but a scratch\"// (D12)",
+          "passageName": "coolLineChoice",
+          "original": "[[Say a cool line like //\"'Tis but a scratch\"// (D12)->coolLineChoice]]"
+        },
+        {
+          "linkText": "Walk away in silence, like a mature \"adult\"",
+          "passageName": "walkAwayChoice",
+          "original": "[[Walk away in silence, like a mature \"adult\"->walkAwayChoice]]"
+        }
+      ],
+      "cleanText": "You swing again. You catch two of them. A collateral! Who knew this rat had paws like these. This will be the new start, the new birth of an iteration of //''The Streak''//. You're on top of the world. A drunk rat man just defeated a gang of entitled rat teenagers ... I guess it sounds better in your own mind. \n(set:$morale to $morale + 3) (set:$diceRoll to (random: 1, 20))"
+    },
+    {
+      "name": "layDownChoice",
+      "tags": "",
+      "id": "31",
+      "text": "You lay down, heavily concussed from losing a fight. This would be a time when //''The Streaktm''// has fully ended. Your eyes begin to close, as you plan to rest on the ground, the teenagers now taking photos for their instagram story.\n\n(if:$morale > 0)[[[Get back up, and stay in your own lane->policeChase]]](else:)[[[Close your eyes to enter the infinite, harmless expanse->Start]]]",
+      "links": [
+        {
+          "linkText": "[Get back up, and stay in your own lane",
+          "passageName": "policeChase]",
+          "original": "[[[Get back up, and stay in your own lane->policeChase]]]"
+        },
+        {
+          "linkText": "[Close your eyes to enter the infinite, harmless expanse",
+          "passageName": "Start]",
+          "original": "[[[Close your eyes to enter the infinite, harmless expanse->Start]]]"
+        }
+      ],
+      "cleanText": "You lay down, heavily concussed from losing a fight. This would be a time when //''The Streaktm''// has fully ended. Your eyes begin to close, as you plan to rest on the ground, the teenagers now taking photos for their instagram story.\n\n(if:$morale > 0)(else:)"
+    },
+    {
+      "name": "policeChase",
+      "tags": "",
+      "id": "32",
+      "text": "//*\"SIR, GET AWAY FROM THE TEENAGERS AND PUT YOUR HANDS UP\"*//\n\nIt's the police. They were a few cars over when they heard word of a drunken fart beating up on some kids. Someone ratted on you. You're gonna go to prison forever. A different, much less tranquil infinite expanse.\n\nYou hear the subway announcer through the speakers. \n\n//*\"This is, Columbus Circle, 59th street. Transfer is available to the 2, C, B, and D trains. This is an accessible station\"*//\n\nThe train stops. The crunch of the doors opening initiates. \n\n[[Make a run for it (D18)->runChaseChoice]]\n[[Stay in place->arrestChoice]]",
+      "links": [
+        {
+          "linkText": "Make a run for it (D18)",
+          "passageName": "runChaseChoice",
+          "original": "[[Make a run for it (D18)->runChaseChoice]]"
+        },
+        {
+          "linkText": "Stay in place",
+          "passageName": "arrestChoice",
+          "original": "[[Stay in place->arrestChoice]]"
+        }
+      ],
+      "cleanText": "//*\"SIR, GET AWAY FROM THE TEENAGERS AND PUT YOUR HANDS UP\"*//\n\nIt's the police. They were a few cars over when they heard word of a drunken fart beating up on some kids. Someone ratted on you. You're gonna go to prison forever. A different, much less tranquil infinite expanse.\n\nYou hear the subway announcer through the speakers. \n\n//*\"This is, Columbus Circle, 59th street. Transfer is available to the 2, C, B, and D trains. This is an accessible station\"*//\n\nThe train stops. The crunch of the doors opening initiates."
+    },
+    {
+      "name": "victoryCartwheelChoice",
+      "tags": "",
+      "id": "33",
+      "text": "Your roll: $diceRoll\n\nYour drunken rage has fully unlocked your physical capabilities. You can finally live out your dream of becoming a gymnast. The hands are in the air, rays poking out from your fingers as you line up the preliminary cart to the wheel. \n\n(if:$diceRoll > 15)[//*SLAP, SLAP, THUNK*//. You did it. You did the cartwheel. The crowd watches in awe. You sir, are a champion. Now take a victory lap, and head back to your seat to figure out why you're here.](else:)[//*SLAP, SLIP, THUNK*//. You failed. This feeling is all too familiar now. Just keep your wits about you and head back to your seat.]\n\n[[Head back to your seat->ObservationBase]]",
+      "links": [
+        {
+          "linkText": "Head back to your seat",
+          "passageName": "ObservationBase",
+          "original": "[[Head back to your seat->ObservationBase]]"
+        }
+      ],
+      "cleanText": "Your roll: $diceRoll\n\nYour drunken rage has fully unlocked your physical capabilities. You can finally live out your dream of becoming a gymnast. The hands are in the air, rays poking out from your fingers as you line up the preliminary cart to the wheel. \n\n(if:$diceRoll > 15)[//*SLAP, SLAP, THUNK*//. You did it. You did the cartwheel. The crowd watches in awe. You sir, are a champion. Now take a victory lap, and head back to your seat to figure out why you're here.](else:)[//*SLAP, SLIP, THUNK*//. You failed. This feeling is all too familiar now. Just keep your wits about you and head back to your seat.]"
+    },
+    {
+      "name": "coolLineChoice",
+      "tags": "",
+      "id": "34",
+      "text": "Your roll: $diceRoll\n\nYou prepare your vocal cords.\n\n(if:$diceRoll > 12)[(set:$status to \"Cool, Calm, and Collected\")(set: $morale to $morale + 2)\"'Tis but a scratch.\" Nailed it. All the beat up teenagers heard it. All the passengers who watched the fight in horror also heard it. Welcome my friend back to: //''The Streak''//. Nothing will stop you this time.](else:)[(set:$morale to $morale - 1)(set:$status to \"Embarassed\")\"I have a butt scratch to itch.\" Fuck. You're simply too drunk to even get out a simple sentence correctly. You just beat up some teenagers to mess up your finishing line. Go back to your seat, and focus on the real mission at hand here.]\n\n[[Go back to rediscovering your origin story->policeChase]]",
+      "links": [
+        {
+          "linkText": "Go back to rediscovering your origin story",
+          "passageName": "policeChase",
+          "original": "[[Go back to rediscovering your origin story->policeChase]]"
+        }
+      ],
+      "cleanText": "Your roll: $diceRoll\n\nYou prepare your vocal cords.\n\n(if:$diceRoll > 12)[(set:$status to \"Cool, Calm, and Collected\")(set: $morale to $morale + 2)\"'Tis but a scratch.\" Nailed it. All the beat up teenagers heard it. All the passengers who watched the fight in horror also heard it. Welcome my friend back to: //''The Streak''//. Nothing will stop you this time.](else:)[(set:$morale to $morale - 1)(set:$status to \"Embarassed\")\"I have a butt scratch to itch.\" Fuck. You're simply too drunk to even get out a simple sentence correctly. You just beat up some teenagers to mess up your finishing line. Go back to your seat, and focus on the real mission at hand here.]"
+    },
+    {
+      "name": "walkAwayChoice",
+      "tags": "",
+      "id": "35",
+      "text": "Your roll: $diceRoll\n\nYou walk away calmly, one step at a time. Nothing needed to be said because your fists did the talking. Say goodbye to being a rat, and welcome home //''The Streak''//. Let it ring through the halls, and walk back to your seat, a victory lap around the appalled spectators. \n(set:$status to \"Cool, Calm, and Collected\")(set:$morale to $morale + 2)\n[[Go back to rediscovering your origin story->policeChase]]",
+      "links": [
+        {
+          "linkText": "Go back to rediscovering your origin story",
+          "passageName": "policeChase",
+          "original": "[[Go back to rediscovering your origin story->policeChase]]"
+        }
+      ],
+      "cleanText": "Your roll: $diceRoll\n\nYou walk away calmly, one step at a time. Nothing needed to be said because your fists did the talking. Say goodbye to being a rat, and welcome home //''The Streak''//. Let it ring through the halls, and walk back to your seat, a victory lap around the appalled spectators. \n(set:$status to \"Cool, Calm, and Collected\")(set:$morale to $morale + 2)"
+    },
+    {
+      "name": "duckTripChoice",
+      "tags": "",
+      "id": "36",
+      "text": "//*FWOOSH*//\n\nThey completely whiff. You whip your tail around their ankles to trip Hyena Skate-Teen. They fall over, hit their head, and sustain a concussion. You've won. Total victory. \n\n[[Celebrate the victory with a victory cartwheel! (D15)->victoryCartwheelChoice]]\n[[Say a cool line like //\"'Tis but a scratch\"// (D12)->coolLineChoice]]\n[[Walk away in silence, like a mature \"adult\"->walkAwayChoice]]",
+      "links": [
+        {
+          "linkText": "Celebrate the victory with a victory cartwheel! (D15)",
+          "passageName": "victoryCartwheelChoice",
+          "original": "[[Celebrate the victory with a victory cartwheel! (D15)->victoryCartwheelChoice]]"
+        },
+        {
+          "linkText": "Say a cool line like //\"'Tis but a scratch\"// (D12)",
+          "passageName": "coolLineChoice",
+          "original": "[[Say a cool line like //\"'Tis but a scratch\"// (D12)->coolLineChoice]]"
+        },
+        {
+          "linkText": "Walk away in silence, like a mature \"adult\"",
+          "passageName": "walkAwayChoice",
+          "original": "[[Walk away in silence, like a mature \"adult\"->walkAwayChoice]]"
+        }
+      ],
+      "cleanText": "//*FWOOSH*//\n\nThey completely whiff. You whip your tail around their ankles to trip Hyena Skate-Teen. They fall over, hit their head, and sustain a concussion. You've won. Total victory."
+    },
+    {
+      "name": "runChaseChoice",
+      "tags": "",
+      "id": "37",
+      "text": "Your roll: (random:15,20)\n\nYour limbs begin to move. Your core has the integrity of a fresh jello. //''The Streak''// is about total victory, and may never contain any interruptions. This firmly breaks the rules of //''The Streak''//. You roll your way through 59th street station, oncoming passerby's stiffly shuffling out the way.\n\n[[Keep running (D15)->moreRunChaseChoice]]",
+      "links": [
+        {
+          "linkText": "Keep running (D15)",
+          "passageName": "moreRunChaseChoice",
+          "original": "[[Keep running (D15)->moreRunChaseChoice]]"
+        }
+      ],
+      "cleanText": "Your roll: (random:15,20)\n\nYour limbs begin to move. Your core has the integrity of a fresh jello. //''The Streak''// is about total victory, and may never contain any interruptions. This firmly breaks the rules of //''The Streak''//. You roll your way through 59th street station, oncoming passerby's stiffly shuffling out the way."
+    },
+    {
+      "name": "arrestChoice",
+      "tags": "",
+      "id": "38",
+      "text": "The cops pin you down and put you in handcuffs. You go on to spend the rest of the next 15 years in prison. This was never part of //''The Streak''//. You've managed to find something worse than being a rat. At least a rat would've preserved their sanctuary. You've managed to fail that too.\n\nThe End.\n\n[[Go back in time a little->ObservationBase]]",
+      "links": [
+        {
+          "linkText": "Go back in time a little",
+          "passageName": "ObservationBase",
+          "original": "[[Go back in time a little->ObservationBase]]"
+        }
+      ],
+      "cleanText": "The cops pin you down and put you in handcuffs. You go on to spend the rest of the next 15 years in prison. This was never part of //''The Streak''//. You've managed to find something worse than being a rat. At least a rat would've preserved their sanctuary. You've managed to fail that too.\n\nThe End."
+    },
+    {
+      "name": "moreRunChaseChoice",
+      "tags": "",
+      "id": "39",
+      "text": "Your roll: (random:15,20)\n\nYour cardio is starting to give out. But you keep trudging forward. The doors on the 2 train begin to close. Your window of oppportunity is closing. Reach for it son. Take the risk. \n\n[[Make a leap for it (D18)->2TrainSuccessChoice]]\n[[Give up->arrestChoice]]",
+      "links": [
+        {
+          "linkText": "Make a leap for it (D18)",
+          "passageName": "2TrainSuccessChoice",
+          "original": "[[Make a leap for it (D18)->2TrainSuccessChoice]]"
+        },
+        {
+          "linkText": "Give up",
+          "passageName": "arrestChoice",
+          "original": "[[Give up->arrestChoice]]"
+        }
+      ],
+      "cleanText": "Your roll: (random:15,20)\n\nYour cardio is starting to give out. But you keep trudging forward. The doors on the 2 train begin to close. Your window of oppportunity is closing. Reach for it son. Take the risk."
+    },
+    {
+      "name": "2TrainSuccessChoice",
+      "tags": "",
+      "id": "40",
+      "text": "Your roll: (random:18,20)\n\n//\"Stand clear of the closing doors please\"//\n\n//Bing//\n\n//''FWIIIIISSHHH''//\n\n//Bong//\n\nYou've made it. The police lost you. This wasn't part of //''The Streak''//. But, for some reason, it's more delightful. \n\nStill. You're still a rat. You don't know who you are. You don't know how you got here. Rattiness is a mindset. \n\n[[Take a seat and think->2TrainObservationBase]]",
+      "links": [
+        {
+          "linkText": "Take a seat and think",
+          "passageName": "2TrainObservationBase",
+          "original": "[[Take a seat and think->2TrainObservationBase]]"
+        }
+      ],
+      "cleanText": "Your roll: (random:18,20)\n\n//\"Stand clear of the closing doors please\"//\n\n//Bing//\n\n//''FWIIIIISSHHH''//\n\n//Bong//\n\nYou've made it. The police lost you. This wasn't part of //''The Streak''//. But, for some reason, it's more delightful. \n\nStill. You're still a rat. You don't know who you are. You don't know how you got here. Rattiness is a mindset."
+    },
+    {
+      "name": "2TrainObservationBase",
+      "tags": "",
+      "id": "41",
+      "text": "Maybe it's your perception. Maybe it's the train itself. But this habitat flows more dynamically. Families move in and out. The scenery between stops are different. Something is different. Not like //''The Streak''//. It's just different...\n\nA lion fitted with dark suit, red striped tie, and portfolio brief bag sits at the edge of the seating to your right. Something about her strikes you as familiar but you don't know what. She's confident though. Emenating power.\n\nOn the opposite side, to your left, an otter in a much shabbier suit ties his tie, paws shaking, with his laptop haphazardly open, about to slip off his lap. \n\nParallel to you, in the far, far, right corner, another rat! He seems to be much more at ease than you, sitting, with a couple more of those sexy brown bottles you saw on the previous train. Maybe he'll share some with you.\n(set:$morale to 3) (set:$status to \"Inquisitive\")\n[[Approach the familiar figure->lionChoice]]\n[[Become the otter's therapist->otterChoice]]\n[[Cahoot with the other rat->ratChoice]]",
+      "links": [
+        {
+          "linkText": "Approach the familiar figure",
+          "passageName": "lionChoice",
+          "original": "[[Approach the familiar figure->lionChoice]]"
+        },
+        {
+          "linkText": "Become the otter's therapist",
+          "passageName": "otterChoice",
+          "original": "[[Become the otter's therapist->otterChoice]]"
+        },
+        {
+          "linkText": "Cahoot with the other rat",
+          "passageName": "ratChoice",
+          "original": "[[Cahoot with the other rat->ratChoice]]"
+        }
+      ],
+      "cleanText": "Maybe it's your perception. Maybe it's the train itself. But this habitat flows more dynamically. Families move in and out. The scenery between stops are different. Something is different. Not like //''The Streak''//. It's just different...\n\nA lion fitted with dark suit, red striped tie, and portfolio brief bag sits at the edge of the seating to your right. Something about her strikes you as familiar but you don't know what. She's confident though. Emenating power.\n\nOn the opposite side, to your left, an otter in a much shabbier suit ties his tie, paws shaking, with his laptop haphazardly open, about to slip off his lap. \n\nParallel to you, in the far, far, right corner, another rat! He seems to be much more at ease than you, sitting, with a couple more of those sexy brown bottles you saw on the previous train. Maybe he'll share some with you.\n(set:$morale to 3) (set:$status to \"Inquisitive\")"
+    },
+    {
+      "name": "lionChoice",
+      "tags": "",
+      "id": "42",
+      "text": "The lion seems to have already noticed you before you noticed her. Blank eyes of will shine through though. You crave information, just anything. You want to break //''The Streak''//. You go up to her, knees shaking, body still sore, and ask:\n\n[[\"Who am I?\"->idChoice]]\n[[\"How did I get here?\"->getHereChoice]]\n[[\"Who are you?\"->whoAreChoice]]\n[[Look at her lanyard->lanyardChoice]]",
+      "links": [
+        {
+          "linkText": "\"Who am I?\"",
+          "passageName": "idChoice",
+          "original": "[[\"Who am I?\"->idChoice]]"
+        },
+        {
+          "linkText": "\"How did I get here?\"",
+          "passageName": "getHereChoice",
+          "original": "[[\"How did I get here?\"->getHereChoice]]"
+        },
+        {
+          "linkText": "\"Who are you?\"",
+          "passageName": "whoAreChoice",
+          "original": "[[\"Who are you?\"->whoAreChoice]]"
+        },
+        {
+          "linkText": "Look at her lanyard",
+          "passageName": "lanyardChoice",
+          "original": "[[Look at her lanyard->lanyardChoice]]"
+        }
+      ],
+      "cleanText": "The lion seems to have already noticed you before you noticed her. Blank eyes of will shine through though. You crave information, just anything. You want to break //''The Streak''//. You go up to her, knees shaking, body still sore, and ask:"
+    },
+    {
+      "name": "otterChoice",
+      "tags": "",
+      "id": "43",
+      "text": "You approach the Otter with as much sensitivity as possible. \n\n\"Hey //-burrrrrp-// what seems to be issue?\" you ask, with the friendliest face you can put up.\n\n\"Arrgghh I can't talk right now this is relaly tough because the powerpoint - the placeholders - saving, just nothing happening right at all the wrong times and I'm really scared...\"\n\nHe stops typing on his computer and breaks down in tears.\n\n[[\"Soo, what seems to be the issue\"->issueChoice]]\n[[\"Hey it's gonna be alright\"->alrightChoice]]\n[[\"Just become a rat like me\"->becomeRatChoice]]",
+      "links": [
+        {
+          "linkText": "\"Soo, what seems to be the issue\"",
+          "passageName": "issueChoice",
+          "original": "[[\"Soo, what seems to be the issue\"->issueChoice]]"
+        },
+        {
+          "linkText": "\"Hey it's gonna be alright\"",
+          "passageName": "alrightChoice",
+          "original": "[[\"Hey it's gonna be alright\"->alrightChoice]]"
+        },
+        {
+          "linkText": "\"Just become a rat like me\"",
+          "passageName": "becomeRatChoice",
+          "original": "[[\"Just become a rat like me\"->becomeRatChoice]]"
+        }
+      ],
+      "cleanText": "You approach the Otter with as much sensitivity as possible. \n\n\"Hey //-burrrrrp-// what seems to be issue?\" you ask, with the friendliest face you can put up.\n\n\"Arrgghh I can't talk right now this is relaly tough because the powerpoint - the placeholders - saving, just nothing happening right at all the wrong times and I'm really scared...\"\n\nHe stops typing on his computer and breaks down in tears."
+    },
+    {
+      "name": "ratChoice",
+      "tags": "",
+      "id": "44",
+      "text": "A familiar sight, almost as if you're looking in a mirror (probably because you are also a rat), you walk up to the other rat. \n\n//\"Heeeyyy friieennd -*burp*- wanna chat?\"//\n\nWow, you probably sound like this to other people too.\n\n[[\"What's your origin story\"->ratChatChoice]]\n[[\"Would you lend a fellow rat a beer?\"->beerChatChoice]]\n[[Sing a song together->songChoice]]",
+      "links": [
+        {
+          "linkText": "\"What's your origin story\"",
+          "passageName": "ratChatChoice",
+          "original": "[[\"What's your origin story\"->ratChatChoice]]"
+        },
+        {
+          "linkText": "\"Would you lend a fellow rat a beer?\"",
+          "passageName": "beerChatChoice",
+          "original": "[[\"Would you lend a fellow rat a beer?\"->beerChatChoice]]"
+        },
+        {
+          "linkText": "Sing a song together",
+          "passageName": "songChoice",
+          "original": "[[Sing a song together->songChoice]]"
+        }
+      ],
+      "cleanText": "A familiar sight, almost as if you're looking in a mirror (probably because you are also a rat), you walk up to the other rat. \n\n//\"Heeeyyy friieennd -*burp*- wanna chat?\"//\n\nWow, you probably sound like this to other people too."
+    },
+    {
+      "name": "idChoice",
+      "tags": "",
+      "id": "45",
+      "text": "\"Ratbrain, what kind of question is that\" \n\nUgh. Ratbrain. That name irks your soul. And not just because you are a rat. Are they insulting you, or do they think that's your actual name? \n\n[[\"Are you insulting me or is that my name\"->nameChoice]]\n[[\"Ratbrain does not answer to an inferior\"->dumbChoice]]",
+      "links": [
+        {
+          "linkText": "\"Are you insulting me or is that my name\"",
+          "passageName": "nameChoice",
+          "original": "[[\"Are you insulting me or is that my name\"->nameChoice]]"
+        },
+        {
+          "linkText": "\"Ratbrain does not answer to an inferior\"",
+          "passageName": "dumbChoice",
+          "original": "[[\"Ratbrain does not answer to an inferior\"->dumbChoice]]"
+        }
+      ],
+      "cleanText": "\"Ratbrain, what kind of question is that\" \n\nUgh. Ratbrain. That name irks your soul. And not just because you are a rat. Are they insulting you, or do they think that's your actual name?"
+    },
+    {
+      "name": "getHereChoice",
+      "tags": "",
+      "id": "46",
+      "text": "\"You applied for the job. You filled out your resume. You wrote a cover letter describing all the great things about McKinsey & Co. You took an interview in the war room. Are you even a real adult?\"\n\nYou are both the same age.\n(set:$status to \"Inferior\") (set:$morale to $morale - 1)\n(if: $nameEnd and $otterEnd and $singEnd)[[[Talk about something else before you think you might get \"fired\"->lionChoice]]](else:)[[[Talk about something else before you think you might get \"fired\"->cTrainFulton]]]",
+      "links": [
+        {
+          "linkText": "[Talk about something else before you think you might get \"fired\"",
+          "passageName": "lionChoice]",
+          "original": "[[[Talk about something else before you think you might get \"fired\"->lionChoice]]]"
+        },
+        {
+          "linkText": "[Talk about something else before you think you might get \"fired\"",
+          "passageName": "cTrainFulton]",
+          "original": "[[[Talk about something else before you think you might get \"fired\"->cTrainFulton]]]"
+        }
+      ],
+      "cleanText": "\"You applied for the job. You filled out your resume. You wrote a cover letter describing all the great things about McKinsey & Co. You took an interview in the war room. Are you even a real adult?\"\n\nYou are both the same age.\n(set:$status to \"Inferior\") (set:$morale to $morale - 1)\n(if: $nameEnd and $otterEnd and $singEnd)(else:)"
+    },
+    {
+      "name": "whoAreChoice",
+      "tags": "",
+      "id": "47",
+      "text": "//\"Ha ha ha\"//\n\nShe looks at your face. You're being serious, or as serious as a deeply buzzed rat can look like. Her straight toothed smile quickly fades to a stern front.\n\n“Your attention span is that destroyed from your phone huh. Do you even remember your onboarding process? Kids like you are why our firm is losing clients. HR sure isn’t going to be happy when I tell them their screening has fallen this far”\n\nNow she looks serious. Maybe you shouldn't have asked that. \n(set:$status to \"Inferior\") (set:$morale to $morale - 1)\n(if: $nameEnd and $otterEnd and $singEnd)[[[Masterfully switch the topic to something else before your ass gets fired->lionChoice]]](else:)[[[Masterfully switch the topic to something else before your ass gets fired->cTrainFulton]]]",
+      "links": [
+        {
+          "linkText": "[Masterfully switch the topic to something else before your ass gets fired",
+          "passageName": "lionChoice]",
+          "original": "[[[Masterfully switch the topic to something else before your ass gets fired->lionChoice]]]"
+        },
+        {
+          "linkText": "[Masterfully switch the topic to something else before your ass gets fired",
+          "passageName": "cTrainFulton]",
+          "original": "[[[Masterfully switch the topic to something else before your ass gets fired->cTrainFulton]]]"
+        }
+      ],
+      "cleanText": "//\"Ha ha ha\"//\n\nShe looks at your face. You're being serious, or as serious as a deeply buzzed rat can look like. Her straight toothed smile quickly fades to a stern front.\n\n“Your attention span is that destroyed from your phone huh. Do you even remember your onboarding process? Kids like you are why our firm is losing clients. HR sure isn’t going to be happy when I tell them their screening has fallen this far”\n\nNow she looks serious. Maybe you shouldn't have asked that. \n(set:$status to \"Inferior\") (set:$morale to $morale - 1)\n(if: $nameEnd and $otterEnd and $singEnd)(else:)"
+    },
+    {
+      "name": "nameChoice",
+      "tags": "",
+      "id": "48",
+      "text": "\"Clint, I know what happened was embarassing but it's just part of being at the company. It's just simple culture. You'll understand once you get to where I'm at.\"\n\nUgh. //Clint//. Something about that name irks you more than Ratbrain. But wait. She said that you work for the same company? Hopefully she didn't see you get chased down by the police. A deep regret of interaction washes over you, as you head back to your seat. \n(set:$status to \"Business-Savvy\") (set:$name to \"Clint\")(set:$linkedin to \"https://www.linkedin.com/in/clint-kratz-212302217/\")(set:$nameEnd to true)\n(if: $nameEnd and $otterEnd and $singEnd)[[[Sit back down in your seat->2TrainObservationBase]]](else:)[[[Sit back down in your seat->cTrainFulton]]]",
+      "links": [
+        {
+          "linkText": "[Sit back down in your seat",
+          "passageName": "2TrainObservationBase]",
+          "original": "[[[Sit back down in your seat->2TrainObservationBase]]]"
+        },
+        {
+          "linkText": "[Sit back down in your seat",
+          "passageName": "cTrainFulton]",
+          "original": "[[[Sit back down in your seat->cTrainFulton]]]"
+        }
+      ],
+      "cleanText": "\"Clint, I know what happened was embarassing but it's just part of being at the company. It's just simple culture. You'll understand once you get to where I'm at.\"\n\nUgh. //Clint//. Something about that name irks you more than Ratbrain. But wait. She said that you work for the same company? Hopefully she didn't see you get chased down by the police. A deep regret of interaction washes over you, as you head back to your seat. \n(set:$status to \"Business-Savvy\") (set:$name to \"Clint\")(set:$linkedin to \"https://www.linkedin.com/in/clint-kratz-212302217/\")(set:$nameEnd to true)\n(if: $nameEnd and $otterEnd and $singEnd)(else:)"
+    },
+    {
+      "name": "dumbChoice",
+      "tags": "",
+      "id": "49",
+      "text": "\"Wow Clint, I didn't think my opinion of you could get any lower. Hope you don't show up to the office like this or else you may not make it to the offsite.\" She grins.\n\nUgh. //Clint//. Something about that name irks you more than Ratbrain. But wait. She said that you work for the same company? Hopefully she didn't see you get chased down by the police. A deep regret of interaction washes over you, as you head back to your seat. \n(set:$status to \"Inferior\") (set:$morale to $morale - 1) (set:$name to \"Clint\")(set:$nameEnd to true)(set:$linkedin to \"https://www.linkedin.com/in/clint-kratz-212302217/\")\n(if: $nameEnd and $otterEnd and $singEnd)[[[Sit back down in your seat->2TrainObservationBase]]](else:)[[[Sit back down in your seat->cTrainFulton]]]",
+      "links": [
+        {
+          "linkText": "[Sit back down in your seat",
+          "passageName": "2TrainObservationBase]",
+          "original": "[[[Sit back down in your seat->2TrainObservationBase]]]"
+        },
+        {
+          "linkText": "[Sit back down in your seat",
+          "passageName": "cTrainFulton]",
+          "original": "[[[Sit back down in your seat->cTrainFulton]]]"
+        }
+      ],
+      "cleanText": "\"Wow Clint, I didn't think my opinion of you could get any lower. Hope you don't show up to the office like this or else you may not make it to the offsite.\" She grins.\n\nUgh. //Clint//. Something about that name irks you more than Ratbrain. But wait. She said that you work for the same company? Hopefully she didn't see you get chased down by the police. A deep regret of interaction washes over you, as you head back to your seat. \n(set:$status to \"Inferior\") (set:$morale to $morale - 1) (set:$name to \"Clint\")(set:$nameEnd to true)(set:$linkedin to \"https://www.linkedin.com/in/clint-kratz-212302217/\")\n(if: $nameEnd and $otterEnd and $singEnd)(else:)"
+    },
+    {
+      "name": "lanyardChoice",
+      "tags": "",
+      "id": "50",
+      "text": "You eyes focus on the lanyard. It shimmers with prestige in the plastic lights of the train car. A clean, uninterrupted streak scopes diagonally across the lanyard canvas. You see the name: \"Trisha Vanderbilt\" in elegant seriffed font. //Mckinsey & Company// nonchalantly loiters in the bottom right corner. \n\n(if: $nameEnd and $otterEnd and $singEnd)[[[Look back at her eyeballs to signify that you are about to have a real and professional conversation->lionChoice]]](else:)[[[Look back at her eyeballs to signify that you are about to have a real and professional conversation->cTrainFulton]]]",
+      "links": [
+        {
+          "linkText": "[Look back at her eyeballs to signify that you are about to have a real and professional conversation",
+          "passageName": "lionChoice]",
+          "original": "[[[Look back at her eyeballs to signify that you are about to have a real and professional conversation->lionChoice]]]"
+        },
+        {
+          "linkText": "[Look back at her eyeballs to signify that you are about to have a real and professional conversation",
+          "passageName": "cTrainFulton]",
+          "original": "[[[Look back at her eyeballs to signify that you are about to have a real and professional conversation->cTrainFulton]]]"
+        }
+      ],
+      "cleanText": "You eyes focus on the lanyard. It shimmers with prestige in the plastic lights of the train car. A clean, uninterrupted streak scopes diagonally across the lanyard canvas. You see the name: \"Trisha Vanderbilt\" in elegant seriffed font. //Mckinsey & Company// nonchalantly loiters in the bottom right corner. \n\n(if: $nameEnd and $otterEnd and $singEnd)(else:)"
+    },
+    {
+      "name": "issueChoice",
+      "tags": "",
+      "id": "51",
+      "text": "\"*sniff* I completely fucked my powerpoint *sniff* I forgot to take out the placeholders and my manager is gonna kill me *sniff* I worked so hard to get here too, my life is overrrr *sobs*\" \n\nHis glasses almost fall off his snout and his computer lid closes shut. He's fully given up. You eyes also begin to well up. Something about this scenario feels a too familiar. \n\n[[\"Don't worry. //''The Streak''// is a false destiny. I know your potential isn't defined by what happens today->confusedChoice]]\n[[\"Don't worry. //''The Streak''// isn't about success. Just embrace a different streak, and join us rats->confusedChoice]]",
+      "links": [
+        {
+          "linkText": "\"Don't worry. //''The Streak''// is a false destiny. I know your potential isn't defined by what happens today",
+          "passageName": "confusedChoice",
+          "original": "[[\"Don't worry. //''The Streak''// is a false destiny. I know your potential isn't defined by what happens today->confusedChoice]]"
+        },
+        {
+          "linkText": "\"Don't worry. //''The Streak''// isn't about success. Just embrace a different streak, and join us rats",
+          "passageName": "confusedChoice",
+          "original": "[[\"Don't worry. //''The Streak''// isn't about success. Just embrace a different streak, and join us rats->confusedChoice]]"
+        }
+      ],
+      "cleanText": "\"*sniff* I completely fucked my powerpoint *sniff* I forgot to take out the placeholders and my manager is gonna kill me *sniff* I worked so hard to get here too, my life is overrrr *sobs*\" \n\nHis glasses almost fall off his snout and his computer lid closes shut. He's fully given up. You eyes also begin to well up. Something about this scenario feels a too familiar."
+    },
+    {
+      "name": "alrightChoice",
+      "tags": "",
+      "id": "52",
+      "text": "The Otter looks at you in disbelief\n\n\"How could it ever be alright? I was doing so well *sniff* everything was perfect. I doubt I'll ever recover\"\n\n[[\"Soo, what seems to be the issue\"->issueChoice]]\n[[\"Just become a rat like me\"->becomeRatChoice]]",
+      "links": [
+        {
+          "linkText": "\"Soo, what seems to be the issue\"",
+          "passageName": "issueChoice",
+          "original": "[[\"Soo, what seems to be the issue\"->issueChoice]]"
+        },
+        {
+          "linkText": "\"Just become a rat like me\"",
+          "passageName": "becomeRatChoice",
+          "original": "[[\"Just become a rat like me\"->becomeRatChoice]]"
+        }
+      ],
+      "cleanText": "The Otter looks at you in disbelief\n\n\"How could it ever be alright? I was doing so well *sniff* everything was perfect. I doubt I'll ever recover\""
+    },
+    {
+      "name": "becomeRatChoice",
+      "tags": "",
+      "id": "53",
+      "text": "You say: \"//-burpppp-// The rat life is the apt life brochacho. No worries, no responsibility\"\n\nThat did not come out how you imagined it in your head. You also half believe what you are saying. Maybe it's sobering up. Maybe //''The Streak''// matters less? Maybe it's a combination of both. \n\nStop thinking. You're meant to be Mr.Otter's therapist. It doesn't seem like this made him feel any better.\n\n\"Well *sniffs* I don't really want to be a rat like you. I've got, or maybe at this point *sniffs* had a future ahead of me\"\n\n[[\"Well fuck you then!\" *walks off, preserving self dignity*->2TrainObservationBase]]\n[[\"What is making these tears fall out of your eyes?\"->issueChoice]]",
+      "links": [
+        {
+          "linkText": "\"Well fuck you then!\" *walks off, preserving self dignity*",
+          "passageName": "2TrainObservationBase",
+          "original": "[[\"Well fuck you then!\" *walks off, preserving self dignity*->2TrainObservationBase]]"
+        },
+        {
+          "linkText": "\"What is making these tears fall out of your eyes?\"",
+          "passageName": "issueChoice",
+          "original": "[[\"What is making these tears fall out of your eyes?\"->issueChoice]]"
+        }
+      ],
+      "cleanText": "You say: \"//-burpppp-// The rat life is the apt life brochacho. No worries, no responsibility\"\n\nThat did not come out how you imagined it in your head. You also half believe what you are saying. Maybe it's sobering up. Maybe //''The Streak''// matters less? Maybe it's a combination of both. \n\nStop thinking. You're meant to be Mr.Otter's therapist. It doesn't seem like this made him feel any better.\n\n\"Well *sniffs* I don't really want to be a rat like you. I've got, or maybe at this point *sniffs* had a future ahead of me\""
+    },
+    {
+      "name": "confusedChoice",
+      "tags": "",
+      "id": "54",
+      "text": "The river streaming down his face stops all of a sudden. He looks at you, and back down at his computer, and back at you.\n\n\"What the fuck are you even saying\"\n\nHe is genuinely confused by your passionate words of wisdom. But you, the therapist, have done you job right. He's not crying anymore.\n(set:$otterEnd to true)\n(if: $nameEnd and $otterEnd and $singEnd)[[[//Whisper to yourself \"mission complete\"//->2TrainObservationBase]]](else:)[[[//Whisper to yourself \"mission complete\"//->cTrainFulton]]]",
+      "links": [
+        {
+          "linkText": "[//Whisper to yourself \"mission complete\"//",
+          "passageName": "2TrainObservationBase]",
+          "original": "[[[//Whisper to yourself \"mission complete\"//->2TrainObservationBase]]]"
+        },
+        {
+          "linkText": "[//Whisper to yourself \"mission complete\"//",
+          "passageName": "cTrainFulton]",
+          "original": "[[[//Whisper to yourself \"mission complete\"//->cTrainFulton]]]"
+        }
+      ],
+      "cleanText": "The river streaming down his face stops all of a sudden. He looks at you, and back down at his computer, and back at you.\n\n\"What the fuck are you even saying\"\n\nHe is genuinely confused by your passionate words of wisdom. But you, the therapist, have done you job right. He's not crying anymore.\n(set:$otterEnd to true)\n(if: $nameEnd and $otterEnd and $singEnd)(else:)"
+    },
+    {
+      "name": "beerChatChoice",
+      "tags": "",
+      "id": "55",
+      "text": "//\"Yes mate! I've been scouring for some drinking buddies and it looks like my -*burp*- prayers have been answered\"//\n\nHe hands you a beer, smile on mouth, excited that someone like him exists out in this world. \n\n[[Take the beer and drink to your hearts content->drunkChoice]]\n[[Decline the beer, remembering what happened the last time you drank->2TrainObservationBase]]",
+      "links": [
+        {
+          "linkText": "Take the beer and drink to your hearts content",
+          "passageName": "drunkChoice",
+          "original": "[[Take the beer and drink to your hearts content->drunkChoice]]"
+        },
+        {
+          "linkText": "Decline the beer, remembering what happened the last time you drank",
+          "passageName": "2TrainObservationBase",
+          "original": "[[Decline the beer, remembering what happened the last time you drank->2TrainObservationBase]]"
+        }
+      ],
+      "cleanText": "//\"Yes mate! I've been scouring for some drinking buddies and it looks like my -*burp*- prayers have been answered\"//\n\nHe hands you a beer, smile on mouth, excited that someone like him exists out in this world."
+    },
+    {
+      "name": "songChoice",
+      "tags": "",
+      "id": "56",
+      "text": "He puts his arm around your opposite shoulder. You both sing your favorite Taylor Swift song in unison but out of key: \n\n\"You're on the phone with your girlfriend she's upset\"\n(set:$morale to $morale + 5)\n[[\"She's going off about something that you said\"->taylorSwiftLyric1]]\n[[*Stop singing*->stopSingingChoice]]",
+      "links": [
+        {
+          "linkText": "\"She's going off about something that you said\"",
+          "passageName": "taylorSwiftLyric1",
+          "original": "[[\"She's going off about something that you said\"->taylorSwiftLyric1]]"
+        },
+        {
+          "linkText": "*Stop singing*",
+          "passageName": "stopSingingChoice",
+          "original": "[[*Stop singing*->stopSingingChoice]]"
+        }
+      ],
+      "cleanText": "He puts his arm around your opposite shoulder. You both sing your favorite Taylor Swift song in unison but out of key: \n\n\"You're on the phone with your girlfriend she's upset\"\n(set:$morale to $morale + 5)"
+    },
+    {
+      "name": "drunkChoice",
+      "tags": "",
+      "id": "57",
+      "text": "The world around you turns woozy. Swirls and colors mold together in a both hypnotic and agitating dance. Time passes by in a vaccuum. The fellow rat's speech is going through one ear and out the other, but in your head what he's saying could from the mouth of a professor from Harvard.\n\nYou eyelids become heavier. You desire to explore the vast expanses of space. You want to be stuck on this train. \n(set:$status to \"Super Drunk... Again\")\n[[*Close eyes*->Start]]",
+      "links": [
+        {
+          "linkText": "*Close eyes*",
+          "passageName": "Start",
+          "original": "[[*Close eyes*->Start]]"
+        }
+      ],
+      "cleanText": "The world around you turns woozy. Swirls and colors mold together in a both hypnotic and agitating dance. Time passes by in a vaccuum. The fellow rat's speech is going through one ear and out the other, but in your head what he's saying could from the mouth of a professor from Harvard.\n\nYou eyelids become heavier. You desire to explore the vast expanses of space. You want to be stuck on this train. \n(set:$status to \"Super Drunk... Again\")"
+    },
+    {
+      "name": "taylorSwiftLyric1",
+      "tags": "",
+      "id": "58",
+      "text": "\"'Cause she doesn't get your humor like I do\"\n\n\"I'm in the room, it's a typical Tuesday night\"\n\n\"I'm listening to the kind of music she doesn't like\"\n\n\"And she'll never know your story like I do\"\n\nYour synced vocals echo through the halls of the train car. The rigid fibers of society are unable to grasp the raw eminated energy on display. \n(set:$morale to $morale + 2)\n[[\"But she wears short skirts, I wear T-shirts\"->taylorSwiftLyric2]]\n[[*Stop singing*->stopSingingChoice]]",
+      "links": [
+        {
+          "linkText": "\"But she wears short skirts, I wear T-shirts\"",
+          "passageName": "taylorSwiftLyric2",
+          "original": "[[\"But she wears short skirts, I wear T-shirts\"->taylorSwiftLyric2]]"
+        },
+        {
+          "linkText": "*Stop singing*",
+          "passageName": "stopSingingChoice",
+          "original": "[[*Stop singing*->stopSingingChoice]]"
+        }
+      ],
+      "cleanText": "\"'Cause she doesn't get your humor like I do\"\n\n\"I'm in the room, it's a typical Tuesday night\"\n\n\"I'm listening to the kind of music she doesn't like\"\n\n\"And she'll never know your story like I do\"\n\nYour synced vocals echo through the halls of the train car. The rigid fibers of society are unable to grasp the raw eminated energy on display. \n(set:$morale to $morale + 2)"
+    },
+    {
+      "name": "stopSingingChoice",
+      "tags": "",
+      "id": "59",
+      "text": "\"Cheerio mate -*burps*- it was lovely to sing with you\"\n\nHe smiles at you warmly. Rat or not, you gave him something world couldn't provide. \n(set:$status to \"Comfortable\") (set:$morale to $morale + 2) (set:$singEnd to true) (set:$nameEnd to true) (set:$otterEnd to true)\n(if: $nameEnd and $otterEnd and $singEnd)[[[Go back to rumination->cTrainFulton]]](else:)[[Go back to rumination->2TrainObservationBase]]",
+      "links": [
+        {
+          "linkText": "[Go back to rumination",
+          "passageName": "cTrainFulton]",
+          "original": "[[[Go back to rumination->cTrainFulton]]]"
+        },
+        {
+          "linkText": "Go back to rumination",
+          "passageName": "2TrainObservationBase",
+          "original": "[[Go back to rumination->2TrainObservationBase]]"
+        }
+      ],
+      "cleanText": "\"Cheerio mate -*burps*- it was lovely to sing with you\"\n\nHe smiles at you warmly. Rat or not, you gave him something world couldn't provide. \n(set:$status to \"Comfortable\") (set:$morale to $morale + 2) (set:$singEnd to true) (set:$nameEnd to true) (set:$otterEnd to true)\n(if: $nameEnd and $otterEnd and $singEnd)(else:)"
+    },
+    {
+      "name": "taylorSwiftLyric2",
+      "tags": "",
+      "id": "60",
+      "text": "The timidness of allowing your vocal soprano to flow has been thrown out. You don't care. It's time to be free.\n\n\"She's Cheer Captain, and I'm on the bleachers\"\n\n\"Dreaming about the day when you wake up and find\"\n\n\"That what you're looking for has been here the whole time\"\n(set:$morale to $morale + 1)\n[[*Sing through to the end of the song*->endSongChoice]]\n[[*Stop singing*->stopSingingChoice]]",
+      "links": [
+        {
+          "linkText": "*Sing through to the end of the song*",
+          "passageName": "endSongChoice",
+          "original": "[[*Sing through to the end of the song*->endSongChoice]]"
+        },
+        {
+          "linkText": "*Stop singing*",
+          "passageName": "stopSingingChoice",
+          "original": "[[*Stop singing*->stopSingingChoice]]"
+        }
+      ],
+      "cleanText": "The timidness of allowing your vocal soprano to flow has been thrown out. You don't care. It's time to be free.\n\n\"She's Cheer Captain, and I'm on the bleachers\"\n\n\"Dreaming about the day when you wake up and find\"\n\n\"That what you're looking for has been here the whole time\"\n(set:$morale to $morale + 1)"
+    },
+    {
+      "name": "endSongChoice",
+      "tags": "",
+      "id": "61",
+      "text": "You both laugh as you sing through to the end of the song. No one in the train audience claps, probably because you are both horrendus at singing. Nonetheless the other rat looks at you afterward and gives you a warm, needed, hug, pats you on the back, and simply says:\n\n\"Thank you\"\n(set:$status to \"Comfortable\")\n(if: $nameEnd and $otterEnd and $singEnd)[[[Go back to rumination->cTrainFulton]]](else:)[[Go back to rumination->2TrainObservationBase]]",
+      "links": [
+        {
+          "linkText": "[Go back to rumination",
+          "passageName": "cTrainFulton]",
+          "original": "[[[Go back to rumination->cTrainFulton]]]"
+        },
+        {
+          "linkText": "Go back to rumination",
+          "passageName": "2TrainObservationBase",
+          "original": "[[Go back to rumination->2TrainObservationBase]]"
+        }
+      ],
+      "cleanText": "You both laugh as you sing through to the end of the song. No one in the train audience claps, probably because you are both horrendus at singing. Nonetheless the other rat looks at you afterward and gives you a warm, needed, hug, pats you on the back, and simply says:\n\n\"Thank you\"\n(set:$status to \"Comfortable\")\n(if: $nameEnd and $otterEnd and $singEnd)(else:)"
+    },
+    {
+      "name": "ratChatChoice",
+      "tags": "",
+      "id": "62",
+      "text": "\"Well I was doing a little bit of this and a little bit of that in the big city after college -*burrrrp*- but it just wasn't for me. I had one big incident and it all came tumbling down after that. How about you?\" \n\n[[\"I don't know?\"->dontKnowChoice]]",
+      "links": [
+        {
+          "linkText": "\"I don't know?\"",
+          "passageName": "dontKnowChoice",
+          "original": "[[\"I don't know?\"->dontKnowChoice]]"
+        }
+      ],
+      "cleanText": "\"Well I was doing a little bit of this and a little bit of that in the big city after college -*burrrrp*- but it just wasn't for me. I had one big incident and it all came tumbling down after that. How about you?\""
+    },
+    {
+      "name": "dontKnowChoice",
+      "tags": "",
+      "id": "63",
+      "text": "\"Mate what do you mean *you don't know?* What are you doing here ratting away then if you don't even know?\" \n(set:$status to \"Confused\")\n[[\"I don't know?\" *looks back at rat*->ratChoice]]",
+      "links": [
+        {
+          "linkText": "\"I don't know?\" *looks back at rat*",
+          "passageName": "ratChoice",
+          "original": "[[\"I don't know?\" *looks back at rat*->ratChoice]]"
+        }
+      ],
+      "cleanText": "\"Mate what do you mean *you don't know?* What are you doing here ratting away then if you don't even know?\" \n(set:$status to \"Confused\")"
+    },
+    {
+      "name": "cTrainFulton",
+      "tags": "",
+      "id": "64",
+      "text": "//*\"This is, Fulton St Station. Transfer is available to the 2; 3; 4; 5; and J trains. This is an accessible station\"*//\n\nThe Otter hunches off, probably off to meekly hand in his presentation. The Lion struts off, probably on her way to boss more of your fellow employees. Before the doors close she looks back to you:\n\n\"Next time don't fuck *it* up or else it's the real end for you\"\n\n//Bing//\n//Bong//\n\nThe doors become airtight. What's *it*? What did you do at Mckinsey & Company? \n\n[[Ruminate even harder. Tap into your deepest memories to find your greatest mistake. Close your eyes (D16)->memoryFlashback]]",
+      "links": [
+        {
+          "linkText": "Ruminate even harder. Tap into your deepest memories to find your greatest mistake. Close your eyes (D16)",
+          "passageName": "memoryFlashback",
+          "original": "[[Ruminate even harder. Tap into your deepest memories to find your greatest mistake. Close your eyes (D16)->memoryFlashback]]"
+        }
+      ],
+      "cleanText": "//*\"This is, Fulton St Station. Transfer is available to the 2; 3; 4; 5; and J trains. This is an accessible station\"*//\n\nThe Otter hunches off, probably off to meekly hand in his presentation. The Lion struts off, probably on her way to boss more of your fellow employees. Before the doors close she looks back to you:\n\n\"Next time don't fuck *it* up or else it's the real end for you\"\n\n//Bing//\n//Bong//\n\nThe doors become airtight. What's *it*? What did you do at Mckinsey & Company?"
+    },
+    {
+      "name": "memoryFlashback",
+      "tags": "",
+      "id": "65",
+      "text": "Your roll: (random:16,20)\n\nThe dimly lit war room materializes. Light escapes from the projector reflection, as the slides that took you and your team restless nights present themselves on the wall. Clean, pristine, and spotless, they're bound to impress the clients. Your read of the vibe is that //''The Streak''// was still in the room with you.\n\nEverything has been going smooth so far. Everyone's been on tempo, no cracks of the instruments yet to show. But then you reach the last slide:\n(set:$diceRoll to (random:1,20))\n(if:$diceRoll > 15)[[[Continue, endure the pain of the truth (D15)->endurePainChoice]]](else:)[[[Continue, endure the pain of the truth (D15)->takeABreather]]]",
+      "links": [
+        {
+          "linkText": "[Continue, endure the pain of the truth (D15)",
+          "passageName": "endurePainChoice]",
+          "original": "[[[Continue, endure the pain of the truth (D15)->endurePainChoice]]]"
+        },
+        {
+          "linkText": "[Continue, endure the pain of the truth (D15)",
+          "passageName": "takeABreather]",
+          "original": "[[[Continue, endure the pain of the truth (D15)->takeABreather]]]"
+        }
+      ],
+      "cleanText": "Your roll: (random:16,20)\n\nThe dimly lit war room materializes. Light escapes from the projector reflection, as the slides that took you and your team restless nights present themselves on the wall. Clean, pristine, and spotless, they're bound to impress the clients. Your read of the vibe is that //''The Streak''// was still in the room with you.\n\nEverything has been going smooth so far. Everyone's been on tempo, no cracks of the instruments yet to show. But then you reach the last slide:\n(set:$diceRoll to (random:1,20))\n(if:$diceRoll > 15)(else:)"
+    },
+    {
+      "name": "endurePainChoice",
+      "tags": "",
+      "id": "66",
+      "text": "Your Roll: $diceRoll\n\nYou reach into the deepest, darkest, depths of your brain. Stinging nettle of the memories irritate your claw. Your entity is being shredded, but you're getting close. Reach son. Reach.\n\n[[*Reach*->reachMoreChoice]]",
+      "links": [
+        {
+          "linkText": "*Reach*",
+          "passageName": "reachMoreChoice",
+          "original": "[[*Reach*->reachMoreChoice]]"
+        }
+      ],
+      "cleanText": "Your Roll: $diceRoll\n\nYou reach into the deepest, darkest, depths of your brain. Stinging nettle of the memories irritate your claw. Your entity is being shredded, but you're getting close. Reach son. Reach."
+    },
+    {
+      "name": "takeABreather",
+      "tags": "",
+      "id": "67",
+      "text": "Your Roll: $diceRoll\n\nYou try and try. The room shakes, like an earthquake. \n\n*Blink*\n\nNope it's too much for you to handle. You need to take a breather, and try again\n(set:$status to \"Pensive\") (set:$diceRoll to (random:1,20))\n(if:$diceRoll > 15)[[[Try again (D15)->endurePainChoice]]](else:)[[[Try again (D15)->takeABreather]]]",
+      "links": [
+        {
+          "linkText": "[Try again (D15)",
+          "passageName": "endurePainChoice]",
+          "original": "[[[Try again (D15)->endurePainChoice]]]"
+        },
+        {
+          "linkText": "[Try again (D15)",
+          "passageName": "takeABreather]",
+          "original": "[[[Try again (D15)->takeABreather]]]"
+        }
+      ],
+      "cleanText": "Your Roll: $diceRoll\n\nYou try and try. The room shakes, like an earthquake. \n\n*Blink*\n\nNope it's too much for you to handle. You need to take a breather, and try again\n(set:$status to \"Pensive\") (set:$diceRoll to (random:1,20))\n(if:$diceRoll > 15)(else:)"
+    },
+    {
+      "name": "backstoryChoice",
+      "tags": "",
+      "id": "68",
+      "text": "The last slide: \n\n''Region | Q3 Revenue''\nNortheast |// $842,000//\nSoutheast | //$731,000//\nMidwest |// $614,000//\nWest | //$923,000//\nTotal | //$3,100,000//\n\nA member of the client company raises their hand in the crowd:\n\n\"Doesn't this add up to $3,110,000?\"\n\n//Flashback over//\n\n(set:$status to \"Flummoxed\") (set:$morale to -1)\n[[Sit in silence->silentTrainChoiceIntro]]",
+      "links": [
+        {
+          "linkText": "Sit in silence",
+          "passageName": "silentTrainChoiceIntro",
+          "original": "[[Sit in silence->silentTrainChoiceIntro]]"
+        }
+      ],
+      "cleanText": "The last slide: \n\n''Region | Q3 Revenue''\nNortheast |// $842,000//\nSoutheast | //$731,000//\nMidwest |// $614,000//\nWest | //$923,000//\nTotal | //$3,100,000//\n\nA member of the client company raises their hand in the crowd:\n\n\"Doesn't this add up to $3,110,000?\"\n\n//Flashback over//\n\n(set:$status to \"Flummoxed\") (set:$morale to -1)"
+    },
+    {
+      "name": "silentTrainChoice",
+      "tags": "",
+      "id": "69",
+      "text": "What now?\n\n[[Sit in silence->silentTrainChoice2]]",
+      "links": [
+        {
+          "linkText": "Sit in silence",
+          "passageName": "silentTrainChoice2",
+          "original": "[[Sit in silence->silentTrainChoice2]]"
+        }
+      ],
+      "cleanText": "What now?"
+    },
+    {
+      "name": "silentTrainChoice2",
+      "tags": "",
+      "id": "70",
+      "text": "//What now?//\n\n[[Sit in silence->silentTrainChoice3]]",
+      "links": [
+        {
+          "linkText": "Sit in silence",
+          "passageName": "silentTrainChoice3",
+          "original": "[[Sit in silence->silentTrainChoice3]]"
+        }
+      ],
+      "cleanText": "//What now?//"
+    },
+    {
+      "name": "silentTrainChoice3",
+      "tags": "",
+      "id": "71",
+      "text": "''//What now?//''\n\n[[Sit in silence->dogTrainChoice]]",
+      "links": [
+        {
+          "linkText": "Sit in silence",
+          "passageName": "dogTrainChoice",
+          "original": "[[Sit in silence->dogTrainChoice]]"
+        }
+      ],
+      "cleanText": "''//What now?//''"
+    },
+    {
+      "name": "dogTrainChoice",
+      "tags": "",
+      "id": "72",
+      "text": "''//What//''\n\n//''No-''//\n\n//BING//\n//BONG//\n\nOh my god. The cutest dog you've ever seen walks onto the train. Not your weird boozed anthropomorphic versions of it but an actual genuine puppy. It's body so fat but it keeps wagging it's tiny little tail, looking at you with its beady eyes and tongue hanging from the side of its mouth. \n(set:$morale to $morale + 3)\n[[Pet it->petChoice]]",
+      "links": [
+        {
+          "linkText": "Pet it",
+          "passageName": "petChoice",
+          "original": "[[Pet it->petChoice]]"
+        }
+      ],
+      "cleanText": "''//What//''\n\n//''No-''//\n\n//BING//\n//BONG//\n\nOh my god. The cutest dog you've ever seen walks onto the train. Not your weird boozed anthropomorphic versions of it but an actual genuine puppy. It's body so fat but it keeps wagging it's tiny little tail, looking at you with its beady eyes and tongue hanging from the side of its mouth. \n(set:$morale to $morale + 3)"
+    },
+    {
+      "name": "silentTrainChoiceIntro",
+      "tags": "",
+      "id": "73",
+      "text": "That was it? That was what caused the end of //''The Streak''//? That was what caused your entire life to spiral away? You really are pathetic. Everything that led up to this, was simply because you were slightly embarassed of an addition error that no one cared about except for you? Is this what life is about to you?\n\n[[Sit in silence->silentTrainChoice]]",
+      "links": [
+        {
+          "linkText": "Sit in silence",
+          "passageName": "silentTrainChoice",
+          "original": "[[Sit in silence->silentTrainChoice]]"
+        }
+      ],
+      "cleanText": "That was it? That was what caused the end of //''The Streak''//? That was what caused your entire life to spiral away? You really are pathetic. Everything that led up to this, was simply because you were slightly embarassed of an addition error that no one cared about except for you? Is this what life is about to you?"
+    },
+    {
+      "name": "petChoice",
+      "tags": "",
+      "id": "74",
+      "text": "As you rub the top of its head its eyes close, smile growing wider. The woes of the past transfer from your hand, through the dog, straight to the ground. The person holding its leash stands still, sunglasses on, airpods in. \n\n[[Say \"sit\"->sitChoice]]",
+      "links": [
+        {
+          "linkText": "Say \"sit\"",
+          "passageName": "sitChoice",
+          "original": "[[Say \"sit\"->sitChoice]]"
+        }
+      ],
+      "cleanText": "As you rub the top of its head its eyes close, smile growing wider. The woes of the past transfer from your hand, through the dog, straight to the ground. The person holding its leash stands still, sunglasses on, airpods in."
+    },
+    {
+      "name": "sitChoice",
+      "tags": "",
+      "id": "75",
+      "text": "The dog does a little hop and then sits. Tail waggling on the ground even faster as it pants, spilling some drool on the ground. \n\n[[Try to rub its tummy->rubTummyChoice]]",
+      "links": [
+        {
+          "linkText": "Try to rub its tummy",
+          "passageName": "rubTummyChoice",
+          "original": "[[Try to rub its tummy->rubTummyChoice]]"
+        }
+      ],
+      "cleanText": "The dog does a little hop and then sits. Tail waggling on the ground even faster as it pants, spilling some drool on the ground."
+    },
+    {
+      "name": "rubTummyChoice",
+      "tags": "",
+      "id": "76",
+      "text": "You do a little finger gesture to convey \"roll over\" to the dog. The dog rolls over, still looking at you, and you start scratching it's tumm-\n\n//''Attention passengers, this is Church Avenue. Transfer is available to the B, Q, F, and G trains. Stand clear of the closing doors, please.''//\n\nOh no. Your joy. Your life. Your risk. It's all going soon. The dogwalker tugs the leash a little. The dog still looks at you as it trots its little legs through the doors on its way out. You could either reach, risk leaving the train, or simply stay, and continue //''The Streak''//. The doors begin to close their shackles.\n(set:$diceRoll to (random:1,20))\n[[Reach son. Reach. (D0)->exitTrainChoice]]\n[[Stay. (D0)->stayChoice]]",
+      "links": [
+        {
+          "linkText": "Reach son. Reach. (D0)",
+          "passageName": "exitTrainChoice",
+          "original": "[[Reach son. Reach. (D0)->exitTrainChoice]]"
+        },
+        {
+          "linkText": "Stay. (D0)",
+          "passageName": "stayChoice",
+          "original": "[[Stay. (D0)->stayChoice]]"
+        }
+      ],
+      "cleanText": "You do a little finger gesture to convey \"roll over\" to the dog. The dog rolls over, still looking at you, and you start scratching it's tumm-\n\n//''Attention passengers, this is Church Avenue. Transfer is available to the B, Q, F, and G trains. Stand clear of the closing doors, please.''//\n\nOh no. Your joy. Your life. Your risk. It's all going soon. The dogwalker tugs the leash a little. The dog still looks at you as it trots its little legs through the doors on its way out. You could either reach, risk leaving the train, or simply stay, and continue //''The Streak''//. The doors begin to close their shackles.\n(set:$diceRoll to (random:1,20))"
+    },
+    {
+      "name": "exitTrainChoice",
+      "tags": "",
+      "id": "77",
+      "text": "Your Roll: (random:1,20)\n\n**FLASH**\n\nIt's simply too much for you to comprehend. The un-plastic air. The smell of wind. The lack of LEDs. You've walked outside.\n\nBut the dog and dogwalker are quick on their feet, making pace to turn the corner at the block. \n\n[[Get your drunk ass up and follow->followChoice]]",
+      "links": [
+        {
+          "linkText": "Get your drunk ass up and follow",
+          "passageName": "followChoice",
+          "original": "[[Get your drunk ass up and follow->followChoice]]"
+        }
+      ],
+      "cleanText": "Your Roll: (random:1,20)\n\n**FLASH**\n\nIt's simply too much for you to comprehend. The un-plastic air. The smell of wind. The lack of LEDs. You've walked outside.\n\nBut the dog and dogwalker are quick on their feet, making pace to turn the corner at the block."
+    },
+    {
+      "name": "stayChoice",
+      "tags": "",
+      "id": "78",
+      "text": "Your Roll: $diceRoll\n\n...\n\n[[Sit in silence->badEnd1]]",
+      "links": [
+        {
+          "linkText": "Sit in silence",
+          "passageName": "badEnd1",
+          "original": "[[Sit in silence->badEnd1]]"
+        }
+      ],
+      "cleanText": "Your Roll: $diceRoll\n\n..."
+    },
+    {
+      "name": "followChoice",
+      "tags": "",
+      "id": "79",
+      "text": "Your limbs begin to move. Your core has the integrity of a fresh jello. Fuck //''The Streak''//. You roll your way through Church Av, oncoming passerby's stiffly shuffling out the way.\n\n[[Keep going!->keepFollowChoice]]",
+      "links": [
+        {
+          "linkText": "Keep going!",
+          "passageName": "keepFollowChoice",
+          "original": "[[Keep going!->keepFollowChoice]]"
+        }
+      ],
+      "cleanText": "Your limbs begin to move. Your core has the integrity of a fresh jello. Fuck //''The Streak''//. You roll your way through Church Av, oncoming passerby's stiffly shuffling out the way."
+    },
+    {
+      "name": "keepFollowChoice",
+      "tags": "",
+      "id": "80",
+      "text": "Your cardio is starting to give out. But you keep trudging forward. The dog still looks behind at you but the dog walker is moving ground on you. You begin to fear if it's out of reach. I guess it'll be okay if it does. \n\nBut the dogwalker stops. Right in front of a small apartment complex. They take off their shades and take out their airpods. As you catch your footing to get closer to the dog the dogwalker looks at you, your heights exactly even.\n\nShe hands the handle of the leash to you and opens the door, and then simply walks off with her airpods back in. \n\n[[Walk inside?->walkChoice]]",
+      "links": [
+        {
+          "linkText": "Walk inside?",
+          "passageName": "walkChoice",
+          "original": "[[Walk inside?->walkChoice]]"
+        }
+      ],
+      "cleanText": "Your cardio is starting to give out. But you keep trudging forward. The dog still looks behind at you but the dog walker is moving ground on you. You begin to fear if it's out of reach. I guess it'll be okay if it does. \n\nBut the dogwalker stops. Right in front of a small apartment complex. They take off their shades and take out their airpods. As you catch your footing to get closer to the dog the dogwalker looks at you, your heights exactly even.\n\nShe hands the handle of the leash to you and opens the door, and then simply walks off with her airpods back in."
+    },
+    {
+      "name": "walkChoice",
+      "tags": "",
+      "id": "81",
+      "text": "You walk inside. Warm lights illuminate the halls. The dog leads the way for you, you just follow the pull until you reach a door.\n\n''2R''\n\nYou reach into your pockets expecting a key. There's jack shit in there. Well shit. \n(set:$status to \"Satisfied\")\n[[REACH FURTHER SON!->reachFurtherChoice]]",
+      "links": [
+        {
+          "linkText": "REACH FURTHER SON!",
+          "passageName": "reachFurtherChoice",
+          "original": "[[REACH FURTHER SON!->reachFurtherChoice]]"
+        }
+      ],
+      "cleanText": "You walk inside. Warm lights illuminate the halls. The dog leads the way for you, you just follow the pull until you reach a door.\n\n''2R''\n\nYou reach into your pockets expecting a key. There's jack shit in there. Well shit. \n(set:$status to \"Satisfied\")"
+    },
+    {
+      "name": "reachFurtherChoice",
+      "tags": "",
+      "id": "82",
+      "text": "You reach and reach, nothing there but void and des-\n\n''//RUFF RUFFF RUFFF//''\n\nThe dog barks loudly and you hear the click of the lock on the door unfasten-\n\n//''HAPPY BIRTHDAY CLINT!''//\n\nIt's your friends and family. They've decided to hold a birthday party for you: someone they deem special enough to hold it for. Your family lives across the country but flew out to see you. Your roommates let them in and set up the large frosted cake on the shabby dining table. You're 26 now, one year older than that //bitch// manager. Your ''//STREAK//'' of being 25 is now over, and you couldn't be happier.\n\n[[Join your family (D0)->goodEnd]]",
+      "links": [
+        {
+          "linkText": "Join your family (D0)",
+          "passageName": "goodEnd",
+          "original": "[[Join your family (D0)->goodEnd]]"
+        }
+      ],
+      "cleanText": "You reach and reach, nothing there but void and des-\n\n''//RUFF RUFFF RUFFF//''\n\nThe dog barks loudly and you hear the click of the lock on the door unfasten-\n\n//''HAPPY BIRTHDAY CLINT!''//\n\nIt's your friends and family. They've decided to hold a birthday party for you: someone they deem special enough to hold it for. Your family lives across the country but flew out to see you. Your roommates let them in and set up the large frosted cake on the shabby dining table. You're 26 now, one year older than that //bitch// manager. Your ''//STREAK//'' of being 25 is now over, and you couldn't be happier."
+    },
+    {
+      "name": "goodEnd",
+      "tags": "",
+      "id": "83",
+      "text": "THE END",
+      "links": [],
+      "cleanText": "THE END"
+    },
+    {
+      "name": "badEnd1",
+      "tags": "",
+      "id": "84",
+      "text": "Your Roll: $diceRoll\n\n//''Last stop, Flatbush Avenue-Brooklyn College. Everyone please leave the train. This is the last stop.''//\n\n[[Sit in silence->badEnd2]]",
+      "links": [
+        {
+          "linkText": "Sit in silence",
+          "passageName": "badEnd2",
+          "original": "[[Sit in silence->badEnd2]]"
+        }
+      ],
+      "cleanText": "Your Roll: $diceRoll\n\n//''Last stop, Flatbush Avenue-Brooklyn College. Everyone please leave the train. This is the last stop.''//"
+    },
+    {
+      "name": "badEnd2",
+      "tags": "",
+      "id": "85",
+      "text": "Your Roll: $diceRoll\n\nTime passes. People walk. Rats stay. You get on the same exact train but it's now uptown. \n\n[[Sit in silence->badEnd3]]",
+      "links": [
+        {
+          "linkText": "Sit in silence",
+          "passageName": "badEnd3",
+          "original": "[[Sit in silence->badEnd3]]"
+        }
+      ],
+      "cleanText": "Your Roll: $diceRoll\n\nTime passes. People walk. Rats stay. You get on the same exact train but it's now uptown."
+    },
+    {
+      "name": "badEnd3",
+      "tags": "",
+      "id": "86",
+      "text": "Your Roll: $diceRoll\n\n''//This is Fulton Street. Transfer is available to the 3, 4, 5, J, Z, and A, C, E trains. Stand clear of the closing doors, please.//''\n\n[[Sit in silence->badEnd4]]",
+      "links": [
+        {
+          "linkText": "Sit in silence",
+          "passageName": "badEnd4",
+          "original": "[[Sit in silence->badEnd4]]"
+        }
+      ],
+      "cleanText": "Your Roll: $diceRoll\n\n''//This is Fulton Street. Transfer is available to the 3, 4, 5, J, Z, and A, C, E trains. Stand clear of the closing doors, please.//''"
+    },
+    {
+      "name": "badEnd4",
+      "tags": "",
+      "id": "87",
+      "text": "Your Roll: $diceRoll\n\n//''Stand clear of the closing doors, please.''//\n\n[[Sit in silence->badEnd5]]",
+      "links": [
+        {
+          "linkText": "Sit in silence",
+          "passageName": "badEnd5",
+          "original": "[[Sit in silence->badEnd5]]"
+        }
+      ],
+      "cleanText": "Your Roll: $diceRoll\n\n//''Stand clear of the closing doors, please.''//"
+    },
+    {
+      "name": "badEnd5",
+      "tags": "",
+      "id": "88",
+      "text": "Your Roll: $diceRoll\n\n...\n\nThe other rat in the corner nods at you approvingly, a beer in his hand.\n\n[[Sit in silence->badEnd6]]",
+      "links": [
+        {
+          "linkText": "Sit in silence",
+          "passageName": "badEnd6",
+          "original": "[[Sit in silence->badEnd6]]"
+        }
+      ],
+      "cleanText": "Your Roll: $diceRoll\n\n...\n\nThe other rat in the corner nods at you approvingly, a beer in his hand."
+    },
+    {
+      "name": "badEnd6",
+      "tags": "",
+      "id": "89",
+      "text": "Your Roll: $diceRoll\n\nYou see the dog walking, through the window in the station with the same dog walker.\n\n[[Sit in silence->badEnd7]]",
+      "links": [
+        {
+          "linkText": "Sit in silence",
+          "passageName": "badEnd7",
+          "original": "[[Sit in silence->badEnd7]]"
+        }
+      ],
+      "cleanText": "Your Roll: $diceRoll\n\nYou see the dog walking, through the window in the station with the same dog walker."
+    },
+    {
+      "name": "badEnd7",
+      "tags": "",
+      "id": "90",
+      "text": "Your Roll: $diceRoll\n\nAt a different stop you see the Otter through the window. He seems to have gotten over his powerpoint issues. It also seems like he's still employed.\n\n[[Sit in silence->badEnd8]]",
+      "links": [
+        {
+          "linkText": "Sit in silence",
+          "passageName": "badEnd8",
+          "original": "[[Sit in silence->badEnd8]]"
+        }
+      ],
+      "cleanText": "Your Roll: $diceRoll\n\nAt a different stop you see the Otter through the window. He seems to have gotten over his powerpoint issues. It also seems like he's still employed."
+    },
+    {
+      "name": "badEnd8",
+      "tags": "",
+      "id": "91",
+      "text": "Your Roll: $diceRoll\n\nYou see the Lion through the window. She's got a new promotion.\n\n[[Sit in silence->badEnd9]]",
+      "links": [
+        {
+          "linkText": "Sit in silence",
+          "passageName": "badEnd9",
+          "original": "[[Sit in silence->badEnd9]]"
+        }
+      ],
+      "cleanText": "Your Roll: $diceRoll\n\nYou see the Lion through the window. She's got a new promotion."
+    },
+    {
+      "name": "badEnd9",
+      "tags": "",
+      "id": "92",
+      "text": "Your Roll: $diceRoll\n\n...\n\n[[Sit in silence->badEnd10]]",
+      "links": [
+        {
+          "linkText": "Sit in silence",
+          "passageName": "badEnd10",
+          "original": "[[Sit in silence->badEnd10]]"
+        }
+      ],
+      "cleanText": "Your Roll: $diceRoll\n\n..."
+    },
+    {
+      "name": "badEnd10",
+      "tags": "",
+      "id": "93",
+      "text": "Your Roll: $diceRoll\n\nYou are Ratface.\n\nTHE END.",
+      "links": [],
+      "cleanText": "Your Roll: $diceRoll\n\nYou are Ratface.\n\nTHE END."
+    },
+    {
+      "name": "reachMoreChoice",
+      "tags": "",
+      "id": "94",
+      "text": "Even more son.\n\n[[*Reach further*->backstoryChoice]]",
+      "links": [
+        {
+          "linkText": "*Reach further*",
+          "passageName": "backstoryChoice",
+          "original": "[[*Reach further*->backstoryChoice]]"
+        }
+      ],
+      "cleanText": "Even more son."
+    },
+    {
+      "name": "deadChoiceAlt",
+      "tags": "",
+      "id": "95",
+      "text": "Occassional rumbles, you're like a celestial body. This is what the dead planets and quarks will experience after the heat death of the universe. You're just getting a preview.\n\n[[Continue to lay down->deadChoice]]\n[[Open your eyes->openEyeChoice]]",
+      "links": [
+        {
+          "linkText": "Continue to lay down",
+          "passageName": "deadChoice",
+          "original": "[[Continue to lay down->deadChoice]]"
+        },
+        {
+          "linkText": "Open your eyes",
+          "passageName": "openEyeChoice",
+          "original": "[[Open your eyes->openEyeChoice]]"
+        }
+      ],
+      "cleanText": "Occassional rumbles, you're like a celestial body. This is what the dead planets and quarks will experience after the heat death of the universe. You're just getting a preview."
+    }
+  ]
+}

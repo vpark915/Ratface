@@ -1,0 +1,909 @@
+:: StoryTitle
+RatfaceV2
+
+
+:: StoryData
+{
+  "ifid": "B3DAE078-E4AB-404E-AF01-E71F389929F7",
+  "format": "Harlowe",
+  "format-version": "3.3.9",
+  "start": "Start",
+  "zoom": 1
+}
+
+
+:: 2TrainObservationBase {"position":"650,2300","size":"100,100"}
+Maybe it's your perception. Maybe it's the train itself. But this habitat flows more dynamically. Families move in and out. The scenery between stops are different. Something is different. Not like //''The Streak''//. It's just different...
+
+A lion fitted with dark suit, red striped tie, and portfolio brief bag sits at the edge of the seating to your right. Something about her strikes you as familiar but you don't know what. She's confident though. Emenating power.
+
+On the opposite side, to your left, an otter in a much shabbier suit ties his tie, paws shaking, with his laptop haphazardly open, about to slip off his lap. 
+
+Parallel to you, in the far, far, right corner, another rat! He seems to be much more at ease than you, sitting, with a couple more of those sexy brown bottles you saw on the previous train. Maybe he'll share some with you.
+(set:$morale to 3) (set:$status to "Inquisitive")
+[[Approach the familiar figure->lionChoice]]
+[[Become the otter's therapist->otterChoice]]
+[[Cahoot with the other rat->ratChoice]]
+
+
+:: 2TrainSuccessChoice {"position":"475,2175","size":"100,100"}
+Your roll: (random:18,20)
+
+//"Stand clear of the closing doors please"//
+
+//Bing//
+
+//''FWIIIIISSHHH''//
+
+//Bong//
+
+You've made it. The police lost you. This wasn't part of //''The Streak''//. But, for some reason, it's more delightful. 
+
+Still. You're still a rat. You don't know who you are. You don't know how you got here. Rattiness is a mindset. 
+
+[[Take a seat and think->2TrainObservationBase]]
+
+
+
+
+
+
+:: ObservationBase {"position":"775,850","size":"100,100"}
+This train car is a literal zoo. No humans to be found. Various species from the animal kingdom lie here: the proud lion on her way to deliver a presentation, the sly snake salesman, on his way to canal street, and you, the rat. 
+
+In the bottom corner of the disabled seating area you see brown, glass bottles, with a little bit of their enchanting liquor left. A loud group of teen hyenas are chatting on their phones, occasionally looking at you, and then back down to their phones, and cackle in unison. One holds a vape in his hand. One holds a skateboard in his hand. And the other is just living in the moment, only a phone in hand.
+
+The 70/30 ratio of piss and janitor soap eminates from the ground, which you've become numb to. What will you do? 
+(set:$diceRoll to (random:1,20))
+[[Wait, sorry, who am I?->identifyChoice]]
+(if:$identifyBool)[[[Talk to the hyenas->hyenaChoice]]
+][[Analyze the bottles->beerChoice]]
+[[I want to attempt a cartwheel! (D15)->cartwheelChoice]]
+
+
+:: Start {"position":"700,350","size":"100,100"}
+The color is black. A mix of drowsiness and nausea fight for first place in your god-forsaken mind. It's your choice. Risk seeing what's out there, or simply lay flat, practically dead.
+
+[[Lay flat->deadChoice]]
+[[Open eyes->openEyeChoice]]
+
+
+:: Transition {"position":"525,850","size":"100,100"}
+Stops pass by at the blink of an eye. But where are we going? Why are we here? When do we get off? When will the illusion break? The streak.
+
+
+:: alrightChoice {"position":"1250,2600","size":"100,100"}
+The Otter looks at you in disbelief
+
+"How could it ever be alright? I was doing so well *sniff* everything was perfect. I doubt I'll ever recover"
+
+[["Soo, what seems to be the issue"->issueChoice]]
+[["Just become a rat like me"->becomeRatChoice]]
+
+
+:: arrestChoice {"position":"475,1875","size":"100,100"}
+The cops pin you down and put you in handcuffs. You go on to spend the rest of the next 15 years in prison. This was never part of //''The Streak''//. You've managed to find something worse than being a rat. At least a rat would've preserved their sanctuary. You've managed to fail that too.
+
+The End.
+
+[[Go back in time a little->ObservationBase]]
+
+
+:: backstoryChoice {"position":"400,3550","size":"100,100"}
+The last slide: 
+
+''Region | Q3 Revenue''
+Northeast |// $842,000//
+Southeast | //$731,000//
+Midwest |// $614,000//
+West | //$923,000//
+Total | //$3,100,000//
+
+A member of the client company raises their hand in the crowd:
+
+"Doesn't this add up to $3,110,000?"
+
+//Flashback over//
+
+(set:$status to "Flummoxed") (set:$morale to -1)
+[[Sit in silence->silentTrainChoiceIntro]]
+
+
+:: badEnd1 {"position":"475,4850","size":"100,100"}
+Your Roll: $diceRoll
+
+//''Last stop, Flatbush Avenue-Brooklyn College. Everyone please leave the train. This is the last stop.''//
+
+[[Sit in silence->badEnd2]]
+
+
+:: badEnd10 {"position":"475,5975","size":"100,100"}
+Your Roll: $diceRoll
+
+You are Ratface.
+
+THE END.
+
+
+:: badEnd2 {"position":"475,4975","size":"100,100"}
+Your Roll: $diceRoll
+
+Time passes. People walk. Rats stay. You get on the same exact train but it's now uptown. 
+
+[[Sit in silence->badEnd3]]
+
+
+:: badEnd3 {"position":"475,5100","size":"100,100"}
+Your Roll: $diceRoll
+
+''//This is Fulton Street. Transfer is available to the 3, 4, 5, J, Z, and A, C, E trains. Stand clear of the closing doors, please.//''
+
+[[Sit in silence->badEnd4]]
+
+
+:: badEnd4 {"position":"475,5225","size":"100,100"}
+Your Roll: $diceRoll
+
+//''Stand clear of the closing doors, please.''//
+
+[[Sit in silence->badEnd5]]
+
+
+:: badEnd5 {"position":"475,5350","size":"100,100"}
+Your Roll: $diceRoll
+
+...
+
+The other rat in the corner nods at you approvingly, a beer in his hand.
+
+[[Sit in silence->badEnd6]]
+
+
+:: badEnd6 {"position":"475,5475","size":"100,100"}
+Your Roll: $diceRoll
+
+You see the dog walking, through the window in the station with the same dog walker.
+
+[[Sit in silence->badEnd7]]
+
+
+:: badEnd7 {"position":"475,5600","size":"100,100"}
+Your Roll: $diceRoll
+
+At a different stop you see the Otter through the window. He seems to have gotten over his powerpoint issues. It also seems like he's still employed.
+
+[[Sit in silence->badEnd8]]
+
+
+:: badEnd8 {"position":"475,5725","size":"100,100"}
+Your Roll: $diceRoll
+
+You see the Lion through the window. She's got a new promotion.
+
+[[Sit in silence->badEnd9]]
+
+
+:: badEnd9 {"position":"475,5850","size":"100,100"}
+Your Roll: $diceRoll
+
+...
+
+[[Sit in silence->badEnd10]]
+
+
+:: becomeRatChoice {"position":"975,2625","size":"100,100"}
+You say: "//-burpppp-// The rat life is the apt life brochacho. No worries, no responsibility"
+
+That did not come out how you imagined it in your head. You also half believe what you are saying. Maybe it's sobering up. Maybe //''The Streak''// matters less? Maybe it's a combination of both. 
+
+Stop thinking. You're meant to be Mr.Otter's therapist. It doesn't seem like this made him feel any better.
+
+"Well *sniffs* I don't really want to be a rat like you. I've got, or maybe at this point *sniffs* had a future ahead of me"
+
+[["Well fuck you then!" *walks off, preserving self dignity*->2TrainObservationBase]]
+[["What is making these tears fall out of your eyes?"->issueChoice]]
+
+
+:: beerChatChoice {"position":"325,2550","size":"100,100"}
+//"Yes mate! I've been scouring for some drinking buddies and it looks like my -*burp*- prayers have been answered"//
+
+He hands you a beer, smile on mouth, excited that someone like him exists out in this world. 
+
+[[Take the beer and drink to your hearts content->drunkChoice]]
+[[Decline the beer, remembering what happened the last time you drank->2TrainObservationBase]]
+
+
+:: beerChoice {"position":"650,975","size":"100,100"}
+The sweet smell of liquor calls you. You can fully forget about //''The Streak<sup>tm</sup>''//. It doesn't matter anymore. A siren, laying on its stage (in this case the gunky subway floor), the beer wraps its temptation around you. You clumsily puppeteer your limbs to greet Mr. Beer with a firm handshake. 
+
+(set:$status to "Horny for Beer")
+(set:$diceRoll to (random: 1,20))
+[[Smell it->smellBeerChoice]]
+[[Take a filthy swig of it you animal->chugBeerChoice]]
+[[Escape it's clutches <span title="This means that if you were to roll a 20 sided dice, you would have to roll a 10 or above to get a success" style="color:red">(D10)</span>->escapeChoice]]
+
+
+:: cTrainFulton {"position":"500,3125","size":"100,100"}
+//*"This is, Fulton St Station. Transfer is available to the 2; 3; 4; 5; and J trains. This is an accessible station"*//
+
+The Otter hunches off, probably off to meekly hand in his presentation. The Lion struts off, probably on her way to boss more of your fellow employees. Before the doors close she looks back to you:
+
+"Next time don't fuck *it* up or else it's the real end for you"
+
+//Bing//
+//Bong//
+
+The doors become airtight. What's *it*? What did you do at Mckinsey & Company? 
+
+[[Ruminate even harder. Tap into your deepest memories to find your greatest mistake. Close your eyes (D16)->memoryFlashback]]
+
+
+:: cartwheelChoice {"position":"1150,975","size":"100,100"}
+Your roll: $diceRoll
+
+Your hands are in the air, rays poking out from your fingers as you line up the preliminary //cart// to the //wheel//. 
+
+(if:$diceRoll > 15)[//*SLAP, SLAP, THUNK*//. You did it. You did the cartwheel. The crowd watches in awe. You sir, are a champion. Now take a victory lap, and head back to your seat to figure out why you're here.](else:)[//*SLAP, SLIP, THUNK*//. You failed. This feeling is all too familiar now. Just keep your wits about you and head back to your seat.]
+
+[[Head back to your seat->policeChase]]
+
+
+:: chugBeerChoice {"position":"275,1175","size":"100,100"}
+Even though you've already passed the subway stop for the //''The Streak<sup>tm</sup>''//, you couldn't care less. The inflation of balloons of forgetfulness leech your mind, and before you know it, this episode of your life fades to black.
+(set:$status to "More drunk than when you started")
+[[//''Allow time to pass in the infinite expanse''//->Start]]
+
+
+:: confusedChoice {"position":"1000,2775","size":"100,100"}
+The river streaming down his face stops all of a sudden. He looks at you, and back down at his computer, and back at you.
+
+"What the fuck are you even saying"
+
+He is genuinely confused by your passionate words of wisdom. But you, the therapist, have done you job right. He's not crying anymore.
+(set:$otterEnd to true)
+(if: $nameEnd and $otterEnd and $singEnd)[[[//Whisper to yourself "mission complete"//->2TrainObservationBase]]](else:)[[[//Whisper to yourself "mission complete"//->cTrainFulton]]]
+
+
+:: coolLineChoice {"position":"700,1725","size":"100,100"}
+Your roll: $diceRoll
+
+You prepare your vocal cords.
+
+(if:$diceRoll > 12)[(set:$status to "Cool, Calm, and Collected")(set: $morale to $morale + 2)"'Tis but a scratch." Nailed it. All the beat up teenagers heard it. All the passengers who watched the fight in horror also heard it. Welcome my friend back to: //''The Streak''//. Nothing will stop you this time.](else:)[(set:$morale to $morale - 1)(set:$status to "Embarassed")"I have a butt scratch to itch." Fuck. You're simply too drunk to even get out a simple sentence correctly. You just beat up some teenagers to mess up your finishing line. Go back to your seat, and focus on the real mission at hand here.]
+
+[[Go back to rediscovering your origin story->policeChase]]
+
+
+:: correctFightChoice {"position":"900,1450","size":"100,100"}
+//*FWOOSH*//
+
+You weave the first swing from Hyena Vape-Teen and wind up the haymaker...
+
+//*THUNK*//
+
+You clock Hyena Vape-Teen in the cheek. A tooth flies out, a prize for your fighting abilities. But Hyena Skate-Teen looks like they're about to swing with their skateboard in hand, a possible deadly blow. 
+
+[[Duck and trip Hyena 2->duckTripChoice]]
+[[Run away->policeChase]]
+
+
+:: crawlChoice {"position":"1100,1400","size":"100,100"}
+You crawl up in a ball and tears start flowing down your cheeks and whiskers. 
+
+"OH MY GOD, A RANDOM TWEAKER TRIED TO PICK A FIGHT WITH US AND GOT TOO SCARED"
+
+A Green Apple flavored vape cloud hurls itself towards your face.
+
+No fight, no guts, you truly are a rat. Might as well just close your eyes, and sleep for the next eternity.
+
+[[Close your eyes->Start]]
+[[//''Prove your guts''//->fightChoice]]
+
+
+:: deadChoice {"position":"500,450","size":"100,100"}
+Silence. It's the one language that you can comprehend. Not impressed, not disappointing. The white bread of experiences. 
+
+[[Continue to lie down->deadChoiceAlt]]
+[[Open your eyes->openEyeChoice]]
+
+
+:: deadChoiceAlt {"position":"450,575","size":"100,100"}
+Occassional rumbles, you're like a celestial body. This is what the dead planets and quarks will experience after the heat death of the universe. You're just getting a preview.
+
+[[Continue to lay down->deadChoice]]
+[[Open your eyes->openEyeChoice]] 
+
+
+:: dogTrainChoice {"position":"400,4225","size":"100,100"}
+''//What//''
+
+//''No-''//
+
+//BING//
+//BONG//
+
+Oh my god. The cutest dog you've ever seen walks onto the train. Not your weird boozed anthropomorphic versions of it but an actual genuine puppy. It's body so fat but it keeps wagging it's tiny little tail, looking at you with its beady eyes and tongue hanging from the side of its mouth. 
+(set:$morale to $morale + 3)
+[[Pet it->petChoice]]
+
+
+:: dontKnowChoice {"position":"25,2700","size":"100,100"}
+"Mate what do you mean *you don't know?* What are you doing here ratting away then if you don't even know?" 
+(set:$status to "Confused")
+[["I don't know?" *looks back at rat*->ratChoice]]
+
+
+:: dontKnowNameChoice {"position":"650,1125","size":"100,100"}
+Shame on you! //''SHAME!''// This is the most important part of a human's origin story. This is why you're simply a rat. Rats don't get names. They just scuttle around without meaning in the infinite labyrinth of the subway tunnels, identifying themselves as the scuttlers of human waste. 
+(set:$diceRoll to (random: 1,20))
+[[No no no I can remember my name I promise! (D18)->nameAttempt]]
+[[I give up->nameGiveUp]]
+
+
+:: drunkChoice {"position":"400,2700","size":"100,100"}
+The world around you turns woozy. Swirls and colors mold together in a both hypnotic and agitating dance. Time passes by in a vaccuum. The fellow rat's speech is going through one ear and out the other, but in your head what he's saying could from the mouth of a professor from Harvard.
+
+You eyelids become heavier. You desire to explore the vast expanses of space. You want to be stuck on this train. 
+(set:$status to "Super Drunk... Again")
+[[*Close eyes*->Start]]
+
+
+:: duckTripChoice {"position":"800,1575","size":"100,100"}
+//*FWOOSH*//
+
+They completely whiff. You whip your tail around their ankles to trip Hyena Skate-Teen. They fall over, hit their head, and sustain a concussion. You've won. Total victory. 
+
+[[Celebrate the victory with a victory cartwheel! (D15)->victoryCartwheelChoice]]
+[[Say a cool line like //"'Tis but a scratch"// (D12)->coolLineChoice]]
+[[Walk away in silence, like a mature "adult"->walkAwayChoice]]
+
+
+:: dumbChoice {"position":"825,2700","size":"100,100"}
+"Wow Clint, I didn't think my opinion of you could get any lower. Hope you don't show up to the office like this or else you may not make it to the offsite." She grins.
+
+Ugh. //Clint//. Something about that name irks you more than Ratbrain. But wait. She said that you work for the same company? Hopefully she didn't see you get chased down by the police. A deep regret of interaction washes over you, as you head back to your seat. 
+(set:$status to "Inferior") (set:$morale to $morale - 1) (set:$name to "Clint")(set:$nameEnd to true)(set:$linkedin to "https://www.linkedin.com/in/clint-kratz-212302217/")
+(if: $nameEnd and $otterEnd and $singEnd)[[[Sit back down in your seat->2TrainObservationBase]]](else:)[[[Sit back down in your seat->cTrainFulton]]]
+
+
+:: endSongChoice {"position":"275,2975","size":"100,100"}
+You both laugh as you sing through to the end of the song. No one in the train audience claps, probably because you are both horrendus at singing. Nonetheless the other rat looks at you afterward and gives you a warm, needed, hug, pats you on the back, and simply says:
+
+"Thank you"
+(set:$status to "Comfortable")
+(if: $nameEnd and $otterEnd and $singEnd)[[[Go back to rumination->cTrainFulton]]](else:)[[Go back to rumination->2TrainObservationBase]]
+
+
+:: endurePainChoice {"position":"425,3400","size":"100,100"}
+Your Roll: $diceRoll
+
+You reach into the deepest, darkest, depths of your brain. Stinging nettle of the memories irritate your claw. Your entity is being shredded, but you're getting close. Reach son. Reach.
+
+[[*Reach*->reachMoreChoice]]
+
+
+:: escapeChoice {"position":"400,1125","size":"100,100"}
+Your Roll: $diceRoll ((if:$diceRoll>15)[Success](else:)[Utter Failure])
+
+(if:$diceRoll >= 15)[Every fiber of your body has been given the directive to resist the sexy alcohol. You're able to successfully prevent another incident that might ruin "The Streak"<sup>tm</sup>] (else:)[You fail to convince yourself that giving up this beer is worth it and you start chugging your woes away.
+
+[[Ohhhh yeah that's the stuff->chugBeerChoice]]]
+
+
+:: exitTrainChoice {"position":"350,4725","size":"100,100"}
+Your Roll: (random:1,20)
+
+**FLASH**
+
+It's simply too much for you to comprehend. The un-plastic air. The smell of wind. The lack of LEDs. You've walked outside.
+
+But the dog and dogwalker are quick on their feet, making pace to turn the corner at the block. 
+
+[[Get your drunk ass up and follow->followChoice]]
+
+
+:: failureHeadbuttFightChoice {"position":"650,1450","size":"100,100"}
+You charge up your headbutt, to pull the most ferocious attack on the Hyena that insulted your age. 25 is not an old age. Maybe they're just too young. 
+
+You fire off the headbutt. They see it from a mile away. They easily side step your attempt and you trip and faceplant into a metal support pole. You are now heavily concussed. 
+(set:$status to "Heavily Concussed") (set:$morale to $morale - 1)
+[[Standup and swing again->standUpChoice]]
+[[Lay down and accept defeat->layDownChoice]]
+
+
+:: failureWeaveFightChoice {"position":"775,1425","size":"100,100"}
+You guessed wrong. You weave to your left and feel a sustained contact on the bone of your jaw. It's the truck of one of their skateboards. Your nausea feels like it just got a million times worse. Saliva flies out of your mouth, exhaling pain and suffering. You are heavily concussed. 
+(set:$morale to $morale - 1) (set:$status to "Heavily Concussed")
+[[Swing back->standUpChoice]]
+[[Stay down->layDownChoice]] 
+
+
+:: fightChoice {"position":"825,1275","size":"100,100"}
+//*BANG*//
+
+Your drunken strike lands clean on the chin of the Hyena that mocked your clothing choices. The other two square up, ready to swing their paws and skateboards at your delicate rat jaw. The Hyena holding a vape drops his vape. The tension is through the sewers. Things are beginning to get serious.
+
+Hyena Vape-Teen winds up a punch
+
+[[Weave left, counter with a quick right jab->failureWeaveFightChoice]]
+[[Weave right, counter with a haymaker left->correctFightChoice]]
+[[Swing your leg to trip->correctFightChoice]]
+[[Attempt a tactical headbutt->failureHeadbuttFightChoice]]
+
+
+:: followChoice {"position":"325,4850","size":"100,100"}
+Your limbs begin to move. Your core has the integrity of a fresh jello. Fuck //''The Streak''//. You roll your way through Church Av, oncoming passerby's stiffly shuffling out the way.
+
+[[Keep going!->keepFollowChoice]]
+
+
+:: getHereChoice {"position":"850,2550","size":"100,100"}
+"You applied for the job. You filled out your resume. You wrote a cover letter describing all the great things about McKinsey & Co. You took an interview in the war room. Are you even a real adult?"
+
+You are both the same age.
+(set:$status to "Inferior") (set:$morale to $morale - 1)
+(if: $nameEnd and $otterEnd and $singEnd)[[[Talk about something else before you think you might get "fired"->lionChoice]]](else:)[[[Talk about something else before you think you might get "fired"->cTrainFulton]]]
+
+
+:: goodEnd {"position":"325,5350","size":"100,100"}
+THE END
+
+
+:: header [header] {"position":"875,350","size":"100,100"}
+(if: $morale is 0)[(set: $morale to 3)] (if:$identifyBool is 0)[(set:$identifyBool to false)] (if: $name is 0)[(set: $name to "????")] (if: $status is 0)[(set: $status to "Oblivion")](if: $linkedin is 0)[(set:$linkedin to "???")](if:$otterEnd is 0)[(set:$otterEnd to false)](if:$otterEnd is 0)[(set:$otterEnd to false)](if:$nameEnd is 0)[(set:$nameEnd to false)](if:$singEnd is 0)[(set:$singEnd to false)]
+''Morale: $morale''	|	''Name: $name''	|	''Current Status: $status''	|	''Linkedin Link: $linkedin''
+----
+
+
+:: howIGotHereChoice {"position":"775,1125","size":"100,100"}
+You have an origin story. You know it and feel it. A rat doesn't appear out of thin air in a subway car. It has to scuttle in somehow. You look around to find something, or someone that has led you in on this chase. You're unable to recognize much. But, the smell of the brown, glass, bottle in the corner sticks out in the sea of NYC musk. 
+
+[[//continue//->ObservationBase]]
+(set:$identifyBool to true)
+
+
+:: hyenaAggroChoice {"position":"1025,1125","size":"100,100"}
+They begin to mock you. 
+
+"YO WHO DOES THIS OLD MAN THINK HE IS?"
+
+You're 25. Or at least you think you are. 
+
+"YOU'RE SO TOUGH HUH"
+
+You never said that.
+
+"YOU DRESS LIKE MY STEP-DAD"
+
+Hurtful.
+(set:$status to "Slightly Concussed")
+[["Look you guys just hurt my feelings and I don't really think it's necessary-"->hyenaSwingChoice]]
+[[//Walk away in shame//->shameChoice]]
+
+
+:: hyenaChoice {"position":"975,950","size":"100,100"}
+You got up to the group of Hyenas, and each of their gazes slowly fasten onto you. A rut is in your throat as you try to think of what to say to them, what to ask them, it feels like an impossible task. But. You have to try.
+
+[["Hi I was wondering if you guys know how I got here?"->hyenaHowChoice]]
+[["I would politely want to ask you guys to stop laughing at me"->hyenaPoliteChoice]]
+[["Get the fuck off my train car before I send your asses to the shadow realm"->hyenaAggroChoice]]
+
+
+:: hyenaHowChoice {"position":"1150,1125","size":"100,100"}
+The young teens look at you. Look back at each other. Their mouths tighten. Their cheeks puff with anticipation. This is not good for you. And then an explosion of laughter hits.
+
+"HEHHEHEHEHEHEHEHE" 
+
+"YOUR JACKET AND TIE LOOK SO GOOFY"
+
+He puffs a large vape cloud right in your face. Green apple flavored. 
+
+"OMG HE ACTUALLY DOES LOOK LIKE A RAT"
+
+Something about that insult feels familiar in a bad way. Laughter fills the train car. Anger for a past version of you bubbles up from the scum.
+
+[[//Swing a punch on one of the teens//->fightChoice]]
+[[//Accept your shame like a loser//->shameChoice]]
+
+
+:: hyenaPoliteChoice {"position":"900,1125","size":"100,100"}
+The young teens look at you. Look back at each other. Their mouths tighten. Their cheeks puff with anticipation. This is not good for you. And then an explosion of laughter hits.
+
+"HEHHEHEHEHEHEHEHE" 
+
+"YOUR JACKET AND TIE LOOK SO GOOFY"
+
+He puffs a large vape cloud right in your face. Green apple flavored. 
+
+"OMG HE ACTUALLY DOES LOOK LIKE A RAT"
+
+Something about that insult feels familiar in a bad way. Laughter fills the train car. Anger for a past version of you bubbles up from the scum.
+
+[[//Swing a punch on one of the teens//->fightChoice]]
+[[//Accept your shame like a loser//->shameChoice]]
+
+
+:: hyenaSwingChoice {"position":"1075,1250","size":"100,100"}
+//*POW*//
+
+A right hook hits the bottom of your jaw and rocks your head back. It's now or never. 
+
+"OLD MAN NEXT TIME IT'S GONNA BE THE SKATEBOARD THAT DOES THE TALKING"
+
+Forget about //''The Streak<sup>tm</sup>''// it's time for you get in on the action. This is your calling, your destiny to start a new //''The Streak<sup>tm</sup>''//. These teenagers need to experience the real world. (set:$status to "Deeply Concussed") (set:$morale to $morale - 1)
+
+[[Crawl up in a ball and cry->crawlChoice]]
+[[Fight back for your glory! *Swings punch*->fightChoice]] 
+
+
+:: idChoice {"position":"725,2550","size":"100,100"}
+"Ratbrain, what kind of question is that" 
+
+Ugh. Ratbrain. That name irks your soul. And not just because you are a rat. Are they insulting you, or do they think that's your actual name? 
+
+[["Are you insulting me or is that my name"->nameChoice]]
+[["Ratbrain does not answer to an inferior"->dumbChoice]]
+
+
+:: identifyChoice {"position":"775,975","size":"100,100"}
+Your name is... you don't know. How could you forget your own name?
+
+[[I don't know!->dontKnowNameChoice]]
+[[Can I get at least how I got here?->howIGotHereChoice]]
+
+
+:: issueChoice {"position":"1125,2625","size":"100,100"}
+"*sniff* I completely fucked my powerpoint *sniff* I forgot to take out the placeholders and my manager is gonna kill me *sniff* I worked so hard to get here too, my life is overrrr *sobs*" 
+
+His glasses almost fall off his snout and his computer lid closes shut. He's fully given up. You eyes also begin to well up. Something about this scenario feels a too familiar. 
+
+[["Don't worry. //''The Streak''// is a false destiny. I know your potential isn't defined by what happens today->confusedChoice]]
+[["Don't worry. //''The Streak''// isn't about success. Just embrace a different streak, and join us rats->confusedChoice]]
+
+
+
+:: keepFollowChoice {"position":"325,4975","size":"100,100"}
+Your cardio is starting to give out. But you keep trudging forward. The dog still looks behind at you but the dog walker is moving ground on you. You begin to fear if it's out of reach. I guess it'll be okay if it does. 
+
+But the dogwalker stops. Right in front of a small apartment complex. They take off their shades and take out their airpods. As you catch your footing to get closer to the dog the dogwalker looks at you, your heights exactly even.
+
+She hands the handle of the leash to you and opens the door, and then simply walks off with her airpods back in. 
+
+[[Walk inside?->walkChoice]]
+
+
+:: lanyardChoice {"position":"600,2550","size":"100,100"}
+You eyes focus on the lanyard. It shimmers with prestige in the plastic lights of the train car. A clean, uninterrupted streak scopes diagonally across the lanyard canvas. You see the name: "Trisha Vanderbilt" in elegant seriffed font. //Mckinsey & Company// nonchalantly loiters in the bottom right corner. 
+
+(if: $nameEnd and $otterEnd and $singEnd)[[[Look back at her eyeballs to signify that you are about to have a real and professional conversation->lionChoice]]](else:)[[[Look back at her eyeballs to signify that you are about to have a real and professional conversation->cTrainFulton]]]
+
+
+:: layDownChoice {"position":"525,1575","size":"100,100"}
+You lay down, heavily concussed from losing a fight. This would be a time when //''The Streak<sup>tm<sup>''// has fully ended. Your eyes begin to close, as you plan to rest on the ground, the teenagers now taking photos for their instagram story.
+
+(if:$morale > 0)[[[Get back up, and stay in your own lane->policeChase]]](else:)[[[Close your eyes to enter the infinite, harmless expanse->Start]]]
+
+
+:: lionChoice {"position":"650,2425","size":"100,100"}
+The lion seems to have already noticed you before you noticed her. Blank eyes of will shine through though. You crave information, just anything. You want to break //''The Streak''//. You go up to her, knees shaking, body still sore, and ask:
+
+[["Who am I?"->idChoice]]
+[["How did I get here?"->getHereChoice]]
+[["Who are you?"->whoAreChoice]]
+[[Look at her lanyard->lanyardChoice]]
+
+
+:: memoryFlashback {"position":"525,3250","size":"100,100"}
+Your roll: (random:16,20)
+
+The dimly lit war room materializes. Light escapes from the projector reflection, as the slides that took you and your team restless nights present themselves on the wall. Clean, pristine, and spotless, they're bound to impress the clients. Your read of the vibe is that //''The Streak''// was still in the room with you.
+
+Everything has been going smooth so far. Everyone's been on tempo, no cracks of the instruments yet to show. But then you reach the last slide:
+(set:$diceRoll to (random:1,20))
+(if:$diceRoll > 15)[[[Continue, endure the pain of the truth (D15)->endurePainChoice]]](else:)[[[Continue, endure the pain of the truth (D15)->takeABreather]]]
+
+
+
+
+
+:: moreRunChaseChoice {"position":"425,2025","size":"100,100"}
+Your roll: (random:15,20)
+
+Your cardio is starting to give out. But you keep trudging forward. The doors on the 2 train begin to close. Your window of oppportunity is closing. Reach for it son. Take the risk. 
+
+[[Make a leap for it (D18)->2TrainSuccessChoice]]
+[[Give up->arrestChoice]]
+
+
+:: nameAttempt {"position":"550,1275","size":"100,100"}
+(if:$diceRoll >= 18)[You successfully vacuumed the shelves of your treacherous memory. Your name is Clint. Clint Kratz. Congratulations, you've successfully named a random rat on the subway.](else:)[In what world did you think that would work? This is why rats don't take risks. What good comes out of trying to fight the inevitable. Silly, immature, rat.]
+(if:$diceRoll < 18)[(set:$morale to $morale - 1)] (if:$diceRoll >= 18)[(set:$name to "Clint Kratz")] (set:$identifyBool to true)
+[[//continue//->ObservationBase]]
+
+
+:: nameChoice {"position":"675,2700","size":"100,100"}
+"Clint, I know what happened was embarassing but it's just part of being at the company. It's just simple culture. You'll understand once you get to where I'm at."
+
+Ugh. //Clint//. Something about that name irks you more than Ratbrain. But wait. She said that you work for the same company? Hopefully she didn't see you get chased down by the police. A deep regret of interaction washes over you, as you head back to your seat. 
+(set:$status to "Business-Savvy") (set:$name to "Clint")(set:$linkedin to "https://www.linkedin.com/in/clint-kratz-212302217/")(set:$nameEnd to true)
+(if: $nameEnd and $otterEnd and $singEnd)[[[Sit back down in your seat->2TrainObservationBase]]](else:)[[[Sit back down in your seat->cTrainFulton]]]
+
+
+:: nameGiveUp {"position":"675,1275","size":"100,100"}
+Good. As you should. What's the point of something as insignificant as a rat taking risks? Just get out of your own head an observe the world from now on.
+(set:$identifyBool to true)
+[[//continue//->ObservationBase]]
+
+
+:: openEyeChoice {"position":"750,475","size":"100,100"}
+**FLASH** 
+It's simply too much for you to comprehend. The loud grumbles emenating from the floor. The bright LED lights blaring through every oriphace contained on your stained body. What the fuck is //Salesforce// and what do they do? These random billboard advertisements might as well be spoken in a different language at this point. //''The Streak<sup>tm</sup>''// is gone. It's all gone...
+
+[[Where am I?->whereAmIChoice]]
+
+
+:: otterChoice {"position":"1025,2475","size":"100,100"}
+You approach the Otter with as much sensitivity as possible. 
+
+"Hey //-burrrrrp-// what seems to be issue?" you ask, with the friendliest face you can put up.
+
+"Arrgghh I can't talk right now this is relaly tough because the powerpoint - the placeholders - saving, just nothing happening right at all the wrong times and I'm really scared..."
+
+He stops typing on his computer and breaks down in tears.
+
+[["Soo, what seems to be the issue"->issueChoice]]
+[["Hey it's gonna be alright"->alrightChoice]]
+[["Just become a rat like me"->becomeRatChoice]]
+
+
+:: petChoice {"position":"400,4350","size":"100,100"}
+As you rub the top of its head its eyes close, smile growing wider. The woes of the past transfer from your hand, through the dog, straight to the ground. The person holding its leash stands still, sunglasses on, airpods in. 
+
+[[Say "sit"->sitChoice]]
+
+
+:: policeChase {"position":"425,1725","size":"100,100"}
+//*"SIR, GET AWAY FROM THE TEENAGERS AND PUT YOUR HANDS UP"*//
+
+It's the police. They were a few cars over when they heard word of a drunken fart beating up on some kids. Someone ratted on you. You're gonna go to prison forever. A different, much less tranquil infinite expanse.
+
+You hear the subway announcer through the speakers. 
+
+//*"This is, Columbus Circle, 59th street. Transfer is available to the 2, C, B, and D trains. This is an accessible station"*//
+
+The train stops. The crunch of the doors opening initiates. 
+
+[[Make a run for it (D18)->runChaseChoice]]
+[[Stay in place->arrestChoice]]
+
+
+:: ratChatChoice {"position":"75,2450","size":"100,100"}
+"Well I was doing a little bit of this and a little bit of that in the big city after college -*burrrrp*- but it just wasn't for me. I had one big incident and it all came tumbling down after that. How about you?" 
+
+[["I don't know?"->dontKnowChoice]]
+
+
+:: ratChoice {"position":"300,2425","size":"100,100"}
+A familiar sight, almost as if you're looking in a mirror (probably because you are also a rat), you walk up to the other rat. 
+
+//"Heeeyyy friieennd -*burp*- wanna chat?"//
+
+Wow, you probably sound like this to other people too.
+
+[["What's your origin story"->ratChatChoice]]
+[["Would you lend a fellow rat a beer?"->beerChatChoice]]
+[[Sing a song together->songChoice]]
+
+
+:: ratFaceReveal {"position":"775,725","size":"100,100"}
+A RAT. A RAT in his crumpled suit and tie, a briefcase no longer to be found, probably stolen by someone with some actual gumption. But you're just a rat. In a both figurative and literal sense. You don't even know how you got here, but you did.
+(set:$status to "Confused and Lost")
+[[*Observe the environment*->ObservationBase]]
+
+
+:: reachFurtherChoice {"position":"325,5225","size":"100,100"}
+You reach and reach, nothing there but void and des-
+
+''//RUFF RUFFF RUFFF//''
+
+The dog barks loudly and you hear the click of the lock on the door unfasten-
+
+//''HAPPY BIRTHDAY CLINT!''//
+
+It's your friends and family. They've decided to hold a birthday party for you: someone they deem special enough to hold it for. Your family lives across the country but flew out to see you. Your roommates let them in and set up the large frosted cake on the shabby dining table. You're 26 now, one year older than that //bitch// manager. Your ''//STREAK//'' of being 25 is now over, and you couldn't be happier.
+
+[[Join your family (D0)->goodEnd]]
+
+
+:: reachMoreChoice {"position":"550,3525","size":"100,100"}
+Even more son.
+
+[[*Reach further*->backstoryChoice]]
+
+
+:: rubTummyChoice {"position":"400,4600","size":"100,100"}
+You do a little finger gesture to convey "roll over" to the dog. The dog rolls over, still looking at you, and you start scratching it's tumm-
+
+//''Attention passengers, this is Church Avenue. Transfer is available to the B, Q, F, and G trains. Stand clear of the closing doors, please.''//
+
+Oh no. Your joy. Your life. Your risk. It's all going soon. The dogwalker tugs the leash a little. The dog still looks at you as it trots its little legs through the doors on its way out. You could either reach, risk leaving the train, or simply stay, and continue //''The Streak''//. The doors begin to close their shackles.
+(set:$diceRoll to (random:1,20))
+[[Reach son. Reach. (D0)->exitTrainChoice]]
+[[Stay. (D0)->stayChoice]]
+
+
+:: runChaseChoice {"position":"350,1875","size":"100,100"}
+Your roll: (random:15,20)
+
+Your limbs begin to move. Your core has the integrity of a fresh jello. //''The Streak''// is about total victory, and may never contain any interruptions. This firmly breaks the rules of //''The Streak''//. You roll your way through 59th street station, oncoming passerby's stiffly shuffling out the way.
+
+[[Keep running (D15)->moreRunChaseChoice]]
+
+
+:: shameChoice {"position":"950,1325","size":"100,100"}
+You shamefully walk away from that interaction. A repeat of what happens all the time. //''The Streak<sup>tm<sup>''// is continued in a way. But walking away you feel a sense of shame. You lost.
+
+[[*Surprise attack on the unsuspecting laughing teens*->fightChoice]]
+[[*Walk away like a rat*->ObservationBase]]
+
+
+:: silentTrainChoice {"position":"400,3850","size":"100,100"}
+What now?
+
+[[Sit in silence->silentTrainChoice2]]
+
+
+:: silentTrainChoice2 {"position":"400,3975","size":"100,100"}
+//What now?//
+
+[[Sit in silence->silentTrainChoice3]]
+
+
+:: silentTrainChoice3 {"position":"400,4100","size":"100,100"}
+''//What now?//''
+
+[[Sit in silence->dogTrainChoice]]
+
+
+:: silentTrainChoiceIntro {"position":"400,3700","size":"100,100"}
+That was it? That was what caused the end of //''The Streak''//? That was what caused your entire life to spiral away? You really are pathetic. Everything that led up to this, was simply because you were slightly embarassed of an addition error that no one cared about except for you? Is this what life is about to you?
+
+[[Sit in silence->silentTrainChoice]]
+
+
+:: sitChoice {"position":"400,4475","size":"100,100"}
+The dog does a little hop and then sits. Tail waggling on the ground even faster as it pants, spilling some drool on the ground. 
+
+[[Try to rub its tummy->rubTummyChoice]]
+
+
+:: smellBeerChoice {"position":"525,1125","size":"100,100"}
+Oh it's a good one alright. Coors Banquet. Your favorite. The temptation is too much and the idea of escape, ironically, has escaped you. Might as well chug.
+
+[[Fine you got me... Chug chug chug->chugBeerChoice]]
+
+
+:: songChoice {"position":"175,2550","size":"100,100"}
+He puts his arm around your opposite shoulder. You both sing your favorite Taylor Swift song in unison but out of key: 
+
+"You're on the phone with your girlfriend she's upset"
+(set:$morale to $morale + 5)
+[["She's going off about something that you said"->taylorSwiftLyric1]]
+[[*Stop singing*->stopSingingChoice]]
+
+
+:: standUpChoice {"position":"650,1575","size":"100,100"}
+You swing again. You catch two of them. A collateral! Who knew this rat had paws like these. This will be the new start, the new birth of an iteration of //''The Streak''//. You're on top of the world. A drunk rat man just defeated a gang of entitled rat teenagers ... I guess it sounds better in your own mind. 
+(set:$morale to $morale + 3) (set:$diceRoll to (random: 1, 20))
+[[Celebrate the victory with a victory cartwheel! (D15)->victoryCartwheelChoice]]
+[[Say a cool line like //"'Tis but a scratch"// (D12)->coolLineChoice]]
+[[Walk away in silence, like a mature "adult"->walkAwayChoice]]
+
+
+:: stayChoice {"position":"475,4725","size":"100,100"}
+Your Roll: $diceRoll
+
+...
+
+[[Sit in silence->badEnd1]]
+
+
+:: stopSingingChoice {"position":"125,2975","size":"100,100"}
+"Cheerio mate -*burps*- it was lovely to sing with you"
+
+He smiles at you warmly. Rat or not, you gave him something world couldn't provide. 
+(set:$status to "Comfortable") (set:$morale to $morale + 2) (set:$singEnd to true) (set:$nameEnd to true) (set:$otterEnd to true)
+(if: $nameEnd and $otterEnd and $singEnd)[[[Go back to rumination->cTrainFulton]]](else:)[[Go back to rumination->2TrainObservationBase]]
+
+
+:: takeABreather {"position":"600,3375","size":"100,100"}
+Your Roll: $diceRoll
+
+You try and try. The room shakes, like an earthquake. 
+
+*Blink*
+
+Nope it's too much for you to handle. You need to take a breather, and try again
+(set:$status to "Pensive") (set:$diceRoll to (random:1,20))
+(if:$diceRoll > 15)[[[Try again (D15)->endurePainChoice]]](else:)[[[Try again (D15)->takeABreather]]]
+
+
+:: taylorSwiftLyric1 {"position":"275,2700","size":"100,100"}
+"'Cause she doesn't get your humor like I do"
+
+"I'm in the room, it's a typical Tuesday night"
+
+"I'm listening to the kind of music she doesn't like"
+
+"And she'll never know your story like I do"
+
+Your synced vocals echo through the halls of the train car. The rigid fibers of society are unable to grasp the raw eminated energy on display. 
+(set:$morale to $morale + 2)
+[["But she wears short skirts, I wear T-shirts"->taylorSwiftLyric2]]
+[[*Stop singing*->stopSingingChoice]]
+
+
+
+:: taylorSwiftLyric2 {"position":"275,2825","size":"100,100"}
+The timidness of allowing your vocal soprano to flow has been thrown out. You don't care. It's time to be free.
+
+"She's Cheer Captain, and I'm on the bleachers"
+
+"Dreaming about the day when you wake up and find"
+
+"That what you're looking for has been here the whole time"
+(set:$morale to $morale + 1)
+[[*Sing through to the end of the song*->endSongChoice]]
+[[*Stop singing*->stopSingingChoice]]
+
+
+:: victoryCartwheelChoice {"position":"850,1725","size":"100,100"}
+Your roll: $diceRoll
+
+Your drunken rage has fully unlocked your physical capabilities. You can finally live out your dream of becoming a gymnast. The hands are in the air, rays poking out from your fingers as you line up the preliminary cart to the wheel. 
+
+(if:$diceRoll > 15)[//*SLAP, SLAP, THUNK*//. You did it. You did the cartwheel. The crowd watches in awe. You sir, are a champion. Now take a victory lap, and head back to your seat to figure out why you're here.](else:)[//*SLAP, SLIP, THUNK*//. You failed. This feeling is all too familiar now. Just keep your wits about you and head back to your seat.]
+
+[[Head back to your seat->ObservationBase]]
+
+
+:: walkAwayChoice {"position":"550,1700","size":"100,100"}
+Your roll: $diceRoll
+
+You walk away calmly, one step at a time. Nothing needed to be said because your fists did the talking. Say goodbye to being a rat, and welcome home //''The Streak''//. Let it ring through the halls, and walk back to your seat, a victory lap around the appalled spectators. 
+(set:$status to "Cool, Calm, and Collected")(set:$morale to $morale + 2)
+[[Go back to rediscovering your origin story->policeChase]]
+
+
+:: walkChoice {"position":"325,5100","size":"100,100"}
+You walk inside. Warm lights illuminate the halls. The dog leads the way for you, you just follow the pull until you reach a door.
+
+''2R''
+
+You reach into your pockets expecting a key. There's jack shit in there. Well shit. 
+(set:$status to "Satisfied")
+[[REACH FURTHER SON!->reachFurtherChoice]]
+
+
+:: whereAmIChoice {"position":"775,600","size":"100,100"}
+You're in a subway car, rudely awaking yourself from a nap. It could be worse. You could simply be dead. But that's not your main concern because when you look in the window, at your reflection, you see...
+
+[[continue->ratFaceReveal]]
+
+
+:: whoAreChoice {"position":"475,2550","size":"100,100"}
+//"Ha ha ha"//
+
+She looks at your face. You're being serious, or as serious as a deeply buzzed rat can look like. Her straight toothed smile quickly fades to a stern front.
+
+“Your attention span is that destroyed from your phone huh. Do you even remember your onboarding process? Kids like you are why our firm is losing clients. HR sure isn’t going to be happy when I tell them their screening has fallen this far”
+
+Now she looks serious. Maybe you shouldn't have asked that. 
+(set:$status to "Inferior") (set:$morale to $morale - 1)
+(if: $nameEnd and $otterEnd and $singEnd)[[[Masterfully switch the topic to something else before your ass gets fired->lionChoice]]](else:)[[[Masterfully switch the topic to something else before your ass gets fired->cTrainFulton]]]
+
+
+:: StoryStylesheet [stylesheet]
+tw-icon[title="Undo"] {
+  display: none;
+}
