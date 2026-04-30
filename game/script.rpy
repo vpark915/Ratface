@@ -2,6 +2,27 @@
 # Source: ratFace.json
 
 # Subscript and superscript.
+# style say_window:
+#     background Transform("#000000", alpha=0.5)
+
+style say_dialogue:
+    color "#ffffff"
+
+style say_label:
+    color "#ffffff"
+
+label splashscreen:
+    scene black
+    with Pause(1)
+
+    show text "Vinnie Park Presents..." with dissolve
+    with Pause(2)
+
+    hide text with dissolve
+    with Pause(1)
+
+    return
+
 init -1 python hide:
 
     FONT_SIZE = gui.text_size
@@ -60,7 +81,7 @@ default diceRoll = 0
 default beerBool = False
 default lionName = "Powerful Lion"
 
-define you = Character("[name]", color="#242e78")
+define you = Character("You", color="#242e78")
 define vapeHyena = Character("Hyena Vape-Teen", color="#d12a2a")
 define skateHyena = Character("Hyena Skate-Teen", color="#d12a2a")
 define normHyena = Character("Hyena Asshole-Teen", color="#d12a2a")
@@ -69,6 +90,7 @@ define drunkRat = Character("Bum Rat",color="#404c33")
 define lion = Character("[lionName]",color="#ffb22d")
 define otter = Character("Mr.Otter", color="#2d222c")
 define cuteDog = Character("Elegant Small Creature", color="#ccfdff")
+define randomCrowd = Character("Random Crowd Member")
 
 image flash = Solid("#ffffff")
 
@@ -357,6 +379,7 @@ label cartwheelFail2:
     show ratFaceSad at center with dissolve
     play sound "audio/Narration/slapslapthunkyoufailed.mp3"
     "{i}SLAP, SLAP, THUNK{/i}. You failed. This feeling is all too familiar now. Just keep your wits about you and head back to your seat."
+    $ status = "Concussed"
     hide ratFaceSad with dissolve
     menu:
         "Waddle Back":
@@ -639,11 +662,6 @@ label hyenaSwingChoice:
         linear 0.3 alpha 0.0
     pause 0.5
     hide flash
-    show ratFace:
-        xalign 0.5
-        rotate 0
-        linear 3.0 rotate 360
-        repeat
     with dissolve
     "{b}*POW*{/b}"
     $ status = "Deeply Concussed"
@@ -663,6 +681,7 @@ label hyenaSwingChoice3:
         zoom 1.4
     with dissolve
     vapeHyena "\"OLD MAN NEXT TIME IT'S GONNA BE THE SKATEBOARD THAT DOES THE TALKING\""
+    hide hyenaVape
     jump hyenaSwingChoice4
 
 label hyenaSwingChoice4:
@@ -755,6 +774,9 @@ label correctFightChoice4:
         "Duck and trip Hyena Skate-teen":
             jump duckTripChoice
         "Run away":
+            hide hyenaSkate
+            hide hyenaNormal
+            hide hyenaVape
             jump policeChase
 
 label correctTrip:
@@ -831,6 +853,9 @@ label failureHeadbuttFightChoice2:
         "Standup and swing again":
             jump standUpChoice
         "Lay down and accept defeat":
+            hide hyenaSkate
+            hide hyenaNormal
+            hide hyenaVape
             jump layDownChoice
 
 label standUpChoice:
@@ -881,10 +906,12 @@ label policeChase:
     hide ratFaceSad
     hide ratFace
     hide police
+    stop music
     show ratFace at right with dissolve
     show police at left:
         yoffset -200
     with dissolve
+    $ status = "Scared and Confused"
     police "{i}\"SIR, GET AWAY FROM THE TEENAGERS AND PUT YOUR HANDS UP\"{/i}"
     jump policeChase2
 
@@ -952,6 +979,7 @@ label victoryCartwheelChoice3:
         hide ratFace
         show ratFaceSad
         play sound "audio/Narration/slapslipthunkyou.mp3"
+        $ status = "Concussed"
         "{i}SLAP, SLIP, THUNK{/i}. You failed. This feeling is all too familiar now. Just keep your wits about you and head back to your seat."
         hide ratFaceSad with dissolve
     jump policeChase
@@ -1541,6 +1569,7 @@ label becomeRatChoice4:
     $ otterEnd = True
     menu:
         "\"Well fuck you then!\" {i}*walks off, preserving self dignity*{/i}":
+            $ status = "Offended"
             hide ratFace
             hide otter with dissolve
             jump p_2TrainObservationBase
@@ -1650,6 +1679,7 @@ label stopSingingChoice:
     # Passage: stopSingingChoice
     $ singEnd = True
     drunkRat "Cheerio mate {i}-*burps*-{/i} it was lovely to sing with you"
+    $ status = "Content with Life"
     hide drunkRat with dissolve
     hide ratFace with dissolve
     menu:
@@ -1687,7 +1717,7 @@ label endSongChoice2:
     stop music fadeout 1.0
     play music "audio/SubwayThemeALT.mp3" fadein 1.0
     drunkRat "\"Thank you\""
-    $ status = "Content"
+    $ status = "Content With Life"
     hide drunkRat with Dissolve(3.0)
     hide ratFace with Dissolve (3.0)
     menu:
@@ -1806,7 +1836,9 @@ label endurePainChoice2:
     stop sound
     play sound "audio/Narration/youreachintothe.mp3"
     "You reach into the deepest, darkest, depths of your brain. Stinging nettle of the memories irritate your claw. Your entity is being shredded, but you're getting close. Reach son. Reach."
-    jump reachMoreChoice
+    menu: 
+        "Reach.":
+            jump reachMoreChoice
 
 label takeABreatherAlt:
     stop sound
@@ -1885,13 +1917,19 @@ label backstoryChoice3:
 
 label backstoryChoice4:
     stop sound
-    "\"Doesn't this add up to $3,110,000\""
+    randomCrowd "\"Doesn't this add up to $3,110,000? Not $3,100,000?\""
+    jump backstoryChoice4_2
+
+label backstoryChoice4_2:
+    stop sound
+    play sound "audio/Narration/yourcoworkersin.mp3"
+    scene black with dissolve
+    "Your psyche" "Your coworkers in the crowd start to giggle. Your face begins to mold. This wasn't how it was supposed to go. This wasn't part of the streak. Everything you worked for, just to be ruined by a simple addition error."
     jump backstoryChoice5
 
 label backstoryChoice5:
     stop sound
     stop music
-    scene black with dissolve
     "{i}Flashback over{/i}"
     jump silentTrainChoiceIntro
 
@@ -2083,6 +2121,7 @@ label exitTrainChoice4:
             jump followChoice
 
 label stayChoice:
+    stop music
     stop sound
     # Passage: stayChoice
     "Your Roll: [diceRoll]"
@@ -2194,18 +2233,20 @@ label preEnd1_1:
 
 label preEnd1:
     stop sound
+    play sound "audio/happyBirthday.mp3"
+    play music "audio/FloatyHappyEndNoHigh.mp3" fadein 2.0 loop
     "{b}HAPPY BIRTHDAY CLINT!{/b}"
     jump preEnd2
 
 label preEnd2:
     stop sound
-    play music "audio/FloatyHappyEnd.mp3" fadein 2.0
     play sound "audio/Narration/itsyourfriends.mp3"
     "{size=-10}It's your friends and family. They've decided to hold a birthday party for you: someone they deem special enough to hold it for. Your family lives across the country but flew out to see you. Your roommates let them in and set up the large frosted cake on the shabby dining table. You're 26 now, one year older than that {i}douchebag{/i} manager Trash-sta Vanderbelch or whatever her name is. Your {b}{i}Streak{sup}TM{/sup}{/i}{/b} of being 25 is now over, and you couldn't be happier.{/size}"
     jump goodEnd
 
 label goodEnd:
     stop sound
+    play music "audio/FloatyHappyEnd.mp3" noloop
     # Passage: goodEnd
     "THE END"
     # End node
@@ -2299,6 +2340,7 @@ label badEnd9:
 
 label badEnd10:
     stop sound
+    scene black with dissolve
     # Passage: badEnd10
     play sound "audio/Narration/youareratface.mp3"
     "You are Ratface."
