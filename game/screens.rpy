@@ -73,7 +73,7 @@ style vslider:
 
 style frame:
     padding gui.frame_borders.padding
-    background Frame("gui/frame.png", gui.frame_borders, tile=gui.frame_tile)
+    background "#000000"
 
 
 
@@ -144,7 +144,7 @@ style namebox:
     ypos gui.name_ypos
     ysize gui.namebox_height
 
-    background Frame("gui/namebox.png", gui.namebox_borders, tile=gui.namebox_tile, xalign=gui.name_xalign)
+    background "#000000"
     padding gui.namebox_borders.padding
 
 style say_label:
@@ -355,7 +355,9 @@ screen main_menu():
     ## This ensures that any other menu screen is replaced.
     tag menu
 
-    add gui.main_menu_background
+    add gui.main_menu_background:
+        xalign 0.5
+        yalign 0.5
 
     ## This empty frame darkens the main menu.
     frame:
@@ -387,7 +389,7 @@ style main_menu_frame:
     xsize 420
     yfill True
 
-    background "gui/overlay/main_menu.png"
+    background "#000000"
 
 style main_menu_vbox:
     xalign 1.0
@@ -503,7 +505,7 @@ style game_menu_outer_frame:
     bottom_padding 45
     top_padding 180
 
-    background "gui/overlay/game_menu.png"
+    background "#000000"
 
 style game_menu_navigation_frame:
     xsize 420
@@ -1186,7 +1188,7 @@ style confirm_button is gui_medium_button
 style confirm_button_text is gui_medium_button_text
 
 style confirm_frame:
-    background Frame([ "gui/confirm_frame.png", "gui/frame.png"], gui.confirm_frame_borders, tile=gui.frame_tile)
+    background "#000000"
     padding gui.confirm_frame_borders.padding
     xalign .5
     yalign .5
@@ -1246,7 +1248,7 @@ style skip_triangle is skip_text
 
 style skip_frame:
     ypos gui.skip_ypos
-    background Frame("gui/skip.png", gui.skip_frame_borders, tile=gui.frame_tile)
+    background "#000000"
     padding gui.skip_frame_borders.padding
 
 style skip_text:
@@ -1290,7 +1292,7 @@ style notify_text is gui_text
 style notify_frame:
     ypos gui.notify_ypos
 
-    background Frame("gui/notify.png", gui.notify_frame_borders, tile=gui.frame_tile)
+    background "#000000"
     padding gui.notify_frame_borders.padding
 
 style notify_text:
@@ -1372,7 +1374,7 @@ style nvl_window:
     xfill True
     yfill True
 
-    background "gui/nvl.png"
+    background "#000000"
     padding gui.nvl_borders.padding
 
 style nvl_entry:
@@ -1554,11 +1556,11 @@ style nvl_window:
 
 style main_menu_frame:
     variant "small"
-    background "gui/phone/overlay/main_menu.png"
+    background "#000000"
 
 style game_menu_outer_frame:
     variant "small"
-    background "gui/phone/overlay/game_menu.png"
+    background "#000000"
 
 style game_menu_navigation_frame:
     variant "small"
